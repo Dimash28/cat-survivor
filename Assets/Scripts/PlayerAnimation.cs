@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
-    private Vector2 lastDir;
+    private Vector2 lastInputVector;
 
     private void Start()
     {
@@ -12,50 +12,28 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
-        Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
-
-        if (inputVector.x > 0)
-        {
-            animator.Play("WalkRight");
-        }
-        else if (inputVector.x < 0)
-        {
-            animator.Play("WalkLeft");
-        }
-        else if (inputVector.y > 0 && inputVector.x == 0)
-        {
-            animator.Play("WalkUp");
-        }
-        else if (inputVector.y < 0 && inputVector.x == 0)
-        {
-            animator.Play("WalkDown"); 
-        }
-
-        lastDir = inputVector;
-
-        if(inputVector == Vector2.zero)
-        {
-            PlayIdleAnimation();
-        }
+        SetInputParameter();
     }
 
-    private void PlayIdleAnimation()
+    private void SetInputParameter()
     {
-        if(lastDir.x > 0 && lastDir.y == 0)
+        Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
+
+        if (inputVector != Vector2.zero)
         {
-            animator.Play("IdleRight");
+            animator.SetBool("IsWalking", true);
+
+            lastInputVector = inputVector;
+
+            animator.SetFloat("InputX", inputVector.x);
+            animator.SetFloat("InputY", inputVector.y);
         }
-        else if(lastDir.x < 0 && lastDir.y == 0)
+        else
         {
-            animator.Play("IdleLeft");
-        }
-        else if(lastDir.x == 0 && lastDir.y > 0)
-        {
-            animator.Play("IdleUp");
-        }
-        else if(lastDir.x == 0 && lastDir.y < 0)
-        {
-            animator.Play("IdleDown");
+            animator.SetBool("IsWalking", false);
+
+            animator.SetFloat("LastInputX", lastInputVector.x);
+            animator.SetFloat("LastInputY", lastInputVector.y);
         }
     }
 }
