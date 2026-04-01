@@ -1,0 +1,1816 @@
+fileFormatVersion: 2
+guid: 3e9b7f0c1614a4740961b99c3c858486
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7848707938238063223
+    second: '[Base]BaseChip_pipo_0'
+  - first:
+      213: -2163557284264048184
+    second: '[Base]BaseChip_pipo_1'
+  - first:
+      213: -6152237611823640865
+    second: '[Base]BaseChip_pipo_2'
+  - first:
+      213: -7702672988755760840
+    second: '[Base]BaseChip_pipo_3'
+  - first:
+      213: 2676458307811617062
+    second: '[Base]BaseChip_pipo_4'
+  - first:
+      213: 5172359125341881869
+    second: '[Base]BaseChip_pipo_5'
+  - first:
+      213: 7080985625815012359
+    second: '[Base]BaseChip_pipo_6'
+  - first:
+      213: -7127748199046343970
+    second: '[Base]BaseChip_pipo_7'
+  - first:
+      213: -7364711242664165220
+    second: '[Base]BaseChip_pipo_8'
+  - first:
+      213: -3654299068792484419
+    second: '[Base]BaseChip_pipo_9'
+  - first:
+      213: -1517471938410309621
+    second: '[Base]BaseChip_pipo_10'
+  - first:
+      213: 5339965462978905202
+    second: '[Base]BaseChip_pipo_11'
+  - first:
+      213: -2945816707985449194
+    second: '[Base]BaseChip_pipo_12'
+  - first:
+      213: 348675669127100063
+    second: '[Base]BaseChip_pipo_13'
+  - first:
+      213: 2241499545177685676
+    second: '[Base]BaseChip_pipo_14'
+  - first:
+      213: -4697231023394172263
+    second: '[Base]BaseChip_pipo_15'
+  - first:
+      213: 1635889855507257428
+    second: '[Base]BaseChip_pipo_16'
+  - first:
+      213: -755115072430909024
+    second: '[Base]BaseChip_pipo_17'
+  - first:
+      213: 2463436930465241715
+    second: '[Base]BaseChip_pipo_18'
+  - first:
+      213: 8932041349645455992
+    second: '[Base]BaseChip_pipo_19'
+  - first:
+      213: 4037398321944712679
+    second: '[Base]BaseChip_pipo_20'
+  - first:
+      213: -5521835126753409976
+    second: '[Base]BaseChip_pipo_21'
+  - first:
+      213: 6530874693241718450
+    second: '[Base]BaseChip_pipo_22'
+  - first:
+      213: -6165808551466716705
+    second: '[Base]BaseChip_pipo_23'
+  - first:
+      213: 1445244126873949014
+    second: '[Base]BaseChip_pipo_24'
+  - first:
+      213: 7578130433253043267
+    second: '[Base]BaseChip_pipo_25'
+  - first:
+      213: -7290672266700058860
+    second: '[Base]BaseChip_pipo_26'
+  - first:
+      213: -1763492161628517297
+    second: '[Base]BaseChip_pipo_27'
+  - first:
+      213: -1559130066895042843
+    second: '[Base]BaseChip_pipo_28'
+  - first:
+      213: 2976375811463166101
+    second: '[Base]BaseChip_pipo_29'
+  - first:
+      213: 7365514287451573593
+    second: '[Base]BaseChip_pipo_30'
+  - first:
+      213: 1110720166705556585
+    second: '[Base]BaseChip_pipo_31'
+  - first:
+      213: -3078488137475817775
+    second: '[Base]BaseChip_pipo_32'
+  - first:
+      213: -6584498108876401854
+    second: '[Base]BaseChip_pipo_33'
+  - first:
+      213: -4974652434417951564
+    second: '[Base]BaseChip_pipo_34'
+  - first:
+      213: 7173742024756813901
+    second: '[Base]BaseChip_pipo_35'
+  - first:
+      213: -876489446567412493
+    second: '[Base]BaseChip_pipo_36'
+  - first:
+      213: -4737678927451879822
+    second: '[Base]BaseChip_pipo_37'
+  - first:
+      213: 5416606432609103481
+    second: '[Base]BaseChip_pipo_38'
+  - first:
+      213: 281414747259554471
+    second: '[Base]BaseChip_pipo_39'
+  - first:
+      213: 6976835635757252638
+    second: '[Base]BaseChip_pipo_40'
+  - first:
+      213: -1402914444458993277
+    second: '[Base]BaseChip_pipo_41'
+  - first:
+      213: -7743493404627762822
+    second: '[Base]BaseChip_pipo_42'
+  - first:
+      213: 4883799278670044076
+    second: '[Base]BaseChip_pipo_43'
+  - first:
+      213: -9150251697075581569
+    second: '[Base]BaseChip_pipo_44'
+  - first:
+      213: 7499648582340733879
+    second: '[Base]BaseChip_pipo_45'
+  - first:
+      213: 5174374044649130764
+    second: '[Base]BaseChip_pipo_46'
+  - first:
+      213: -4207428500809997909
+    second: '[Base]BaseChip_pipo_47'
+  - first:
+      213: -6585191297835083819
+    second: '[Base]BaseChip_pipo_48'
+  - first:
+      213: -2390146394967989935
+    second: '[Base]BaseChip_pipo_49'
+  - first:
+      213: 7831751655064729540
+    second: '[Base]BaseChip_pipo_50'
+  - first:
+      213: -9214089150372828947
+    second: '[Base]BaseChip_pipo_51'
+  - first:
+      213: -4304303372019452176
+    second: '[Base]BaseChip_pipo_52'
+  - first:
+      213: -1977835414578970689
+    second: '[Base]BaseChip_pipo_53'
+  - first:
+      213: -8666444459929266290
+    second: '[Base]BaseChip_pipo_54'
+  - first:
+      213: -424324484495180717
+    second: '[Base]BaseChip_pipo_55'
+  - first:
+      213: 5326713304192221998
+    second: '[Base]BaseChip_pipo_56'
+  - first:
+      213: -5237295173776202075
+    second: '[Base]BaseChip_pipo_57'
+  - first:
+      213: -3186305154958369528
+    second: '[Base]BaseChip_pipo_58'
+  - first:
+      213: 7760601236832726221
+    second: '[Base]BaseChip_pipo_59'
+  - first:
+      213: -1736070096947208156
+    second: '[Base]BaseChip_pipo_60'
+  - first:
+      213: -2100697911316854649
+    second: '[Base]BaseChip_pipo_61'
+  - first:
+      213: -2433825662520690341
+    second: '[Base]BaseChip_pipo_62'
+  - first:
+      213: 3459292145084207789
+    second: '[Base]BaseChip_pipo_63'
+  - first:
+      213: 4183071384871654930
+    second: '[Base]BaseChip_pipo_64'
+  - first:
+      213: 5692228123003585357
+    second: '[Base]BaseChip_pipo_65'
+  - first:
+      213: 6322500853232823020
+    second: '[Base]BaseChip_pipo_66'
+  - first:
+      213: 8931618374473114538
+    second: '[Base]BaseChip_pipo_67'
+  - first:
+      213: 2131087177346492376
+    second: '[Base]BaseChip_pipo_68'
+  - first:
+      213: -6555588951552640777
+    second: '[Base]BaseChip_pipo_69'
+  - first:
+      213: -7409783893690292999
+    second: '[Base]BaseChip_pipo_70'
+  - first:
+      213: -8240249728805239301
+    second: '[Base]BaseChip_pipo_71'
+  - first:
+      213: 3302010279016071689
+    second: '[Base]BaseChip_pipo_72'
+  - first:
+      213: -4908638853908093082
+    second: '[Base]BaseChip_pipo_73'
+  - first:
+      213: -7489444987667729974
+    second: '[Base]BaseChip_pipo_74'
+  - first:
+      213: -5553457117313519589
+    second: '[Base]BaseChip_pipo_75'
+  - first:
+      213: -7209808024599161065
+    second: '[Base]BaseChip_pipo_76'
+  - first:
+      213: 8179740113990914342
+    second: '[Base]BaseChip_pipo_77'
+  - first:
+      213: 1693837320726072568
+    second: '[Base]BaseChip_pipo_78'
+  - first:
+      213: 7111159724477781066
+    second: '[Base]BaseChip_pipo_79'
+  - first:
+      213: 6721878483071684928
+    second: '[Base]BaseChip_pipo_80'
+  - first:
+      213: 8883483374544449445
+    second: '[Base]BaseChip_pipo_81'
+  - first:
+      213: 8783624631508381952
+    second: '[Base]BaseChip_pipo_82'
+  - first:
+      213: -7062955591850774992
+    second: '[Base]BaseChip_pipo_83'
+  - first:
+      213: -6158589481102604377
+    second: '[Base]BaseChip_pipo_84'
+  - first:
+      213: 5113667048215868629
+    second: '[Base]BaseChip_pipo_85'
+  - first:
+      213: -9000947605352164619
+    second: '[Base]BaseChip_pipo_86'
+  - first:
+      213: 3741063265104679997
+    second: '[Base]BaseChip_pipo_87'
+  - first:
+      213: -8654461411237770040
+    second: '[Base]BaseChip_pipo_88'
+  - first:
+      213: 2678226996681592699
+    second: '[Base]BaseChip_pipo_89'
+  - first:
+      213: -7509724868852147091
+    second: '[Base]BaseChip_pipo_90'
+  - first:
+      213: 6833624116471680874
+    second: '[Base]BaseChip_pipo_91'
+  - first:
+      213: -1940958744824657037
+    second: '[Base]BaseChip_pipo_92'
+  - first:
+      213: 1679826094560388730
+    second: '[Base]BaseChip_pipo_93'
+  - first:
+      213: 1859974576133262772
+    second: '[Base]BaseChip_pipo_94'
+  - first:
+      213: -877306746170518989
+    second: '[Base]BaseChip_pipo_95'
+  - first:
+      213: -2894342094907650633
+    second: '[Base]BaseChip_pipo_96'
+  - first:
+      213: 5996212051215970595
+    second: '[Base]BaseChip_pipo_97'
+  - first:
+      213: 8168352488737126535
+    second: '[Base]BaseChip_pipo_98'
+  - first:
+      213: 1258398233914814397
+    second: '[Base]BaseChip_pipo_99'
+  - first:
+      213: -9000189264178056525
+    second: '[Base]BaseChip_pipo_100'
+  - first:
+      213: -1902346765419304621
+    second: '[Base]BaseChip_pipo_101'
+  - first:
+      213: -3286011253530595928
+    second: '[Base]BaseChip_pipo_102'
+  - first:
+      213: 2583368196524346040
+    second: '[Base]BaseChip_pipo_103'
+  - first:
+      213: -4021792159396124065
+    second: '[Base]BaseChip_pipo_104'
+  - first:
+      213: 7374125818996160714
+    second: '[Base]BaseChip_pipo_105'
+  - first:
+      213: 7420539797634313796
+    second: '[Base]BaseChip_pipo_106'
+  - first:
+      213: 4517623131455609312
+    second: '[Base]BaseChip_pipo_107'
+  - first:
+      213: -1316575509716818907
+    second: '[Base]BaseChip_pipo_108'
+  - first:
+      213: -2002609333119572991
+    second: '[Base]BaseChip_pipo_109'
+  - first:
+      213: 4673366723026829467
+    second: '[Base]BaseChip_pipo_110'
+  - first:
+      213: 6412010206174860026
+    second: '[Base]BaseChip_pipo_111'
+  - first:
+      213: -4641142263446896182
+    second: '[Base]BaseChip_pipo_112'
+  - first:
+      213: 6088423899354016551
+    second: '[Base]BaseChip_pipo_113'
+  - first:
+      213: 2782454888675610521
+    second: '[Base]BaseChip_pipo_114'
+  - first:
+      213: 7247581676969967755
+    second: '[Base]BaseChip_pipo_115'
+  - first:
+      213: 8760885591696750652
+    second: '[Base]BaseChip_pipo_116'
+  - first:
+      213: 8959914092757028293
+    second: '[Base]BaseChip_pipo_117'
+  - first:
+      213: -2711231513314662852
+    second: '[Base]BaseChip_pipo_118'
+  - first:
+      213: 5626444559694389939
+    second: '[Base]BaseChip_pipo_119'
+  - first:
+      213: 5965340666993620889
+    second: '[Base]BaseChip_pipo_120'
+  - first:
+      213: -8112859771959169820
+    second: '[Base]BaseChip_pipo_121'
+  - first:
+      213: 6866543121383174009
+    second: '[Base]BaseChip_pipo_122'
+  - first:
+      213: 7378249597910824395
+    second: '[Base]BaseChip_pipo_123'
+  - first:
+      213: -6254841210638772193
+    second: '[Base]BaseChip_pipo_124'
+  - first:
+      213: -4080232749267803357
+    second: '[Base]BaseChip_pipo_125'
+  - first:
+      213: -9096586667767068084
+    second: '[Base]BaseChip_pipo_126'
+  - first:
+      213: -8102022731459309053
+    second: '[Base]BaseChip_pipo_127'
+  - first:
+      213: 977714812000738458
+    second: '[Base]BaseChip_pipo_128'
+  - first:
+      213: -7164072453212599924
+    second: '[Base]BaseChip_pipo_129'
+  - first:
+      213: -3757963385061001902
+    second: '[Base]BaseChip_pipo_130'
+  - first:
+      213: 9083013439393151668
+    second: '[Base]BaseChip_pipo_131'
+  - first:
+      213: 7181170068776276753
+    second: '[Base]BaseChip_pipo_132'
+  - first:
+      213: 6626976907511205306
+    second: '[Base]BaseChip_pipo_133'
+  - first:
+      213: 8659682358810526766
+    second: '[Base]BaseChip_pipo_134'
+  - first:
+      213: -5764957520112803738
+    second: '[Base]BaseChip_pipo_135'
+  - first:
+      213: 3444542860178941442
+    second: '[Base]BaseChip_pipo_136'
+  - first:
+      213: -8360604166608665967
+    second: '[Base]BaseChip_pipo_137'
+  - first:
+      213: 2979615780082551507
+    second: '[Base]BaseChip_pipo_138'
+  - first:
+      213: -5246918594344295343
+    second: '[Base]BaseChip_pipo_139'
+  - first:
+      213: -7713123908734298716
+    second: '[Base]BaseChip_pipo_140'
+  - first:
+      213: -1738640918873265161
+    second: '[Base]BaseChip_pipo_141'
+  - first:
+      213: 736459913354310878
+    second: '[Base]BaseChip_pipo_142'
+  - first:
+      213: 4762587869335658007
+    second: '[Base]BaseChip_pipo_143'
+  - first:
+      213: -7723049785062814957
+    second: '[Base]BaseChip_pipo_144'
+  - first:
+      213: 5922164005136726108
+    second: '[Base]BaseChip_pipo_145'
+  - first:
+      213: -7938382500850407801
+    second: '[Base]BaseChip_pipo_146'
+  - first:
+      213: 6247015347438632405
+    second: '[Base]BaseChip_pipo_147'
+  - first:
+      213: -2359958340573235428
+    second: '[Base]BaseChip_pipo_148'
+  - first:
+      213: 551259119082169037
+    second: '[Base]BaseChip_pipo_149'
+  - first:
+      213: -416841768577177016
+    second: '[Base]BaseChip_pipo_150'
+  - first:
+      213: -3868415174338189711
+    second: '[Base]BaseChip_pipo_151'
+  - first:
+      213: -8718842600806805093
+    second: '[Base]BaseChip_pipo_152'
+  - first:
+      213: 2918849196319052067
+    second: '[Base]BaseChip_pipo_153'
+  - first:
+      213: 6090238919216994969
+    second: '[Base]BaseChip_pipo_154'
+  - first:
+      213: 3806112199569036718
+    second: '[Base]BaseChip_pipo_155'
+  - first:
+      213: -1477595275054574440
+    second: '[Base]BaseChip_pipo_156'
+  - first:
+      213: 2843794952646299900
+    second: '[Base]BaseChip_pipo_157'
+  - first:
+      213: 3957698633041751148
+    second: '[Base]BaseChip_pipo_158'
+  - first:
+      213: -8047240443745202896
+    second: '[Base]BaseChip_pipo_159'
+  - first:
+      213: -9069805963371035241
+    second: '[Base]BaseChip_pipo_160'
+  - first:
+      213: -5211395716500461656
+    second: '[Base]BaseChip_pipo_161'
+  - first:
+      213: -4043102039081996058
+    second: '[Base]BaseChip_pipo_162'
+  - first:
+      213: -4229677336030555967
+    second: '[Base]BaseChip_pipo_163'
+  - first:
+      213: 544992659028902946
+    second: '[Base]BaseChip_pipo_164'
+  - first:
+      213: -9174715404397057517
+    second: '[Base]BaseChip_pipo_165'
+  - first:
+      213: 4606331182628343846
+    second: '[Base]BaseChip_pipo_166'
+  - first:
+      213: 6105127484610634250
+    second: '[Base]BaseChip_pipo_167'
+  - first:
+      213: 7152464929151914035
+    second: '[Base]BaseChip_pipo_168'
+  - first:
+      213: -6667280607249604917
+    second: '[Base]BaseChip_pipo_169'
+  - first:
+      213: 631597073829135823
+    second: '[Base]BaseChip_pipo_170'
+  - first:
+      213: -3618735402631895929
+    second: '[Base]BaseChip_pipo_171'
+  - first:
+      213: -1967628522030065472
+    second: '[Base]BaseChip_pipo_172'
+  - first:
+      213: -7443584810702522860
+    second: '[Base]BaseChip_pipo_173'
+  - first:
+      213: 3931504063648820948
+    second: '[Base]BaseChip_pipo_174'
+  - first:
+      213: -7006509474299880177
+    second: '[Base]BaseChip_pipo_175'
+  - first:
+      213: 4158314400596275122
+    second: '[Base]BaseChip_pipo_176'
+  - first:
+      213: -9159024230638399443
+    second: '[Base]BaseChip_pipo_177'
+  - first:
+      213: 1792467080387260800
+    second: '[Base]BaseChip_pipo_178'
+  - first:
+      213: -5244276286188797260
+    second: '[Base]BaseChip_pipo_179'
+  - first:
+      213: -2511564118960826363
+    second: '[Base]BaseChip_pipo_180'
+  - first:
+      213: 4719829913906851023
+    second: '[Base]BaseChip_pipo_181'
+  - first:
+      213: -6048060967638860854
+    second: '[Base]BaseChip_pipo_182'
+  - first:
+      213: -9150308918593224891
+    second: '[Base]BaseChip_pipo_183'
+  - first:
+      213: 6149839705401332691
+    second: '[Base]BaseChip_pipo_184'
+  - first:
+      213: -3770149790866992104
+    second: '[Base]BaseChip_pipo_185'
+  - first:
+      213: 7762851496804991633
+    second: '[Base]BaseChip_pipo_186'
+  - first:
+      213: 4722583843202717063
+    second: '[Base]BaseChip_pipo_187'
+  - first:
+      213: 3683269859654602900
+    second: '[Base]BaseChip_pipo_188'
+  - first:
+      213: 1846017141973113615
+    second: '[Base]BaseChip_pipo_189'
+  - first:
+      213: -9193552245795294940
+    second: '[Base]BaseChip_pipo_190'
+  - first:
+      213: -1416011913696585080
+    second: '[Base]BaseChip_pipo_191'
+  - first:
+      213: -6394970042877119231
+    second: '[Base]BaseChip_pipo_192'
+  - first:
+      213: 5659379963637353390
+    second: '[Base]BaseChip_pipo_193'
+  - first:
+      213: -7731460388842338591
+    second: '[Base]BaseChip_pipo_194'
+  - first:
+      213: -6271216285456568786
+    second: '[Base]BaseChip_pipo_195'
+  - first:
+      213: -5021924794485805380
+    second: '[Base]BaseChip_pipo_196'
+  - first:
+      213: 5991376045462554068
+    second: '[Base]BaseChip_pipo_197'
+  - first:
+      213: -6768860558627771603
+    second: '[Base]BaseChip_pipo_198'
+  - first:
+      213: -3577120431406338575
+    second: '[Base]BaseChip_pipo_199'
+  - first:
+      213: -6455371611718537589
+    second: '[Base]BaseChip_pipo_200'
+  - first:
+      213: -4631713802449978144
+    second: '[Base]BaseChip_pipo_201'
+  - first:
+      213: 1422028899115372812
+    second: '[Base]BaseChip_pipo_202'
+  - first:
+      213: 4211063098994285058
+    second: '[Base]BaseChip_pipo_203'
+  - first:
+      213: 4553830807459058416
+    second: '[Base]BaseChip_pipo_204'
+  - first:
+      213: -3711180364200729252
+    second: '[Base]BaseChip_pipo_205'
+  - first:
+      213: 2590969630703089666
+    second: '[Base]BaseChip_pipo_206'
+  - first:
+      213: -8805077930101908514
+    second: '[Base]BaseChip_pipo_207'
+  - first:
+      213: 1775190667582824400
+    second: '[Base]BaseChip_pipo_208'
+  - first:
+      213: -8466639240541457456
+    second: '[Base]BaseChip_pipo_209'
+  - first:
+      213: -5924751316056682737
+    second: '[Base]BaseChip_pipo_210'
+  - first:
+      213: 6782395992147361195
+    second: '[Base]BaseChip_pipo_211'
+  - first:
+      213: -7873176482028287921
+    second: '[Base]BaseChip_pipo_212'
+  - first:
+      213: 4060680324029849594
+    second: '[Base]BaseChip_pipo_213'
+  - first:
+      213: -4897464346185692194
+    second: '[Base]BaseChip_pipo_214'
+  - first:
+      213: 8896411036851986803
+    second: '[Base]BaseChip_pipo_215'
+  - first:
+      213: 7286248811961829058
+    second: '[Base]BaseChip_pipo_216'
+  - first:
+      213: -2606564133703971993
+    second: '[Base]BaseChip_pipo_217'
+  - first:
+      213: -7124091179878707885
+    second: '[Base]BaseChip_pipo_218'
+  - first:
+      213: -7470706221940594464
+    second: '[Base]BaseChip_pipo_219'
+  - first:
+      213: 8646684249466714766
+    second: '[Base]BaseChip_pipo_220'
+  - first:
+      213: -3706111086372240526
+    second: '[Base]BaseChip_pipo_221'
+  - first:
+      213: 1386568426351487040
+    second: '[Base]BaseChip_pipo_222'
+  - first:
+      213: -8927540622435834420
+    second: '[Base]BaseChip_pipo_223'
+  - first:
+      213: 2260606097724396994
+    second: '[Base]BaseChip_pipo_224'
+  - first:
+      213: 3184892838162356994
+    second: '[Base]BaseChip_pipo_225'
+  - first:
+      213: -886163411526188848
+    second: '[Base]BaseChip_pipo_226'
+  - first:
+      213: -380873700064281546
+    second: '[Base]BaseChip_pipo_227'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tree1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d1883e6b9c31390800000000000000
+      internalID: -7848707938238063223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree1VerticalWall
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3562271081d33429fcd6d683d78f1d
+      internalID: 810116935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree1HorizontalWall
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958806fe92aaca64f9220ff78487b6d8
+      internalID: 670235279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadTree
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4177324bb11cd6b409bdfd53a6873341
+      internalID: -1493121203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4064
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed20635881740af499cea21ecca525c3
+      internalID: 1076343711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stump1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 4064
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3304319c7f15c4493702b04a4b9766
+      internalID: 247066784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stump2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 4064
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df76265677a8634b85178c9cd83e295
+      internalID: 698444656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 4032
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a00cfb55d76a94c83858fc4756c36d
+      internalID: 532259830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 4032
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1972d9efe8ef82742b26d8a53740bd7a
+      internalID: -498554190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4032
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a83b2d14c320c442abd7cb2e150546a
+      internalID: -1807842476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 4032
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72078a1c0ef04a448947a42616f265f
+      internalID: -511938260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraveStone
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 3968
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f66642618effd4782651c50e3030e9
+      internalID: 942261089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraveWood
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3968
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0481a25628447b4988b23cb74306557
+      internalID: -1214579121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0140fd654b549bf438981b008f3730d1
+      internalID: -763765549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pot
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5634290bc174df54d99f45b88526469a
+      internalID: -470266132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedChestClosed
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 801
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866552c8bb3ebb6498dcee454efb64f1
+      internalID: -1853253342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedChestOpened
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 769
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8424285f19dc06541b1bf0a854e4284a
+      internalID: 1026994049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBookClosed
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568be98fb2fd70b4593e4f39db943679
+      internalID: 365253014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBookOpened
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a387d11107526594b9960391731df524
+      internalID: 1598080186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueBookClosed
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9236cbe13eded2744a9630924c141254
+      internalID: -709204394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueBookOpened
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa889f4d7d3d08f409a52b0b32a5f65b
+      internalID: -35397170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBookClosed
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f8c4c74f49d3e4f8554d339c5a21b5
+      internalID: -1604617656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBookOpened
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3831b179ba947741ad177ea4e08509b
+      internalID: 321881507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenBookClosed
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7ea917f347cef4b9ec1a2f8ece1bfe
+      internalID: -1312645803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenBookOpened
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 429
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6f8e03c15d4324eaeedb67691ddebb
+      internalID: -1716425530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearToy
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 175
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a1fe71010117046a13d74c240f55c3
+      internalID: 1923398554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlToy
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 175
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f084727a1006b4a8b1988630ba2ddc
+      internalID: 858960343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostToy
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 175
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf558f3c947353a4cab122d48800dfe4
+      internalID: 411916194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 44
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b754c2b8a1593546a7cd2bcc639183f
+      internalID: 1636701949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyGolden
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 44
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33673dc4546e3f1408e17d9f4038e3ad
+      internalID: -1302563674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheThrustSword
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f6546b9842fbb4da28c107ea84cee2
+      internalID: 826675086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FoodMeat
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 331
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71848253365ccd41b05f4e054f793d1
+      internalID: -1431191009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MagicBall
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 298
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2d6350101237e4f9c67ccd0a9c4185
+      internalID: 1963299995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 267
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950d4ee438dcc83499b179668425ed06
+      internalID: -230956637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatueGoblin
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6f1122c14ba5f44ad53c60592714f5
+      internalID: 1542280720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[Base]BaseChip_pipo_0'
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60af6d49d58a39a45be0cd08e72e08fa
+      internalID: 795745444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatueAngel
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 512
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd076d2783c20f849b1674536217f5ba
+      internalID: 489778044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatueGargoyle
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2336bce3a1ed3f4da6a7805fd81a751
+      internalID: 296210169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pit
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3968
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c879ac40d67a24da78d98adb26fb6b
+      internalID: 1862998839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 3968
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f9547d969ac0c4390b185e004d197a
+      internalID: 559205531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3968
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a1915edd07db345b9f7e74cbb0edb9
+      internalID: -1777327849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarecrow
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 3600
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741942fd86fa43440b6df4d3ea331efe
+      internalID: -2141092459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogHorizontal
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4064
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41050a02fcf210845a059f78135d3a27
+      internalID: -1922051245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogVertical
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 3968
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56287a6f9bec7ac4b9d7f39830214e30
+      internalID: 2026876612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3d83011f69c3c0840b2f1a5f26f6bf1b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":4256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      2: 698444656
+      BearToy: 1923398554
+      BlackBookClosed: -1604617656
+      BlackBookOpened: 321881507
+      BlueBookClosed: 63199578
+      BlueBookOpened: -35397170
+      Bush1: 1076343711
+      DeadTree: -1493121203
+      Flowers1: 532259830
+      Flowers2: -498554190
+      Flowers3: -1807842476
+      Flowers4: -511938260
+      FoodMeat: -1431191009
+      Fountain: -763765549
+      GhostToy: 411916194
+      GirlToy: 858960343
+      Gold: -230956637
+      GraveStone: 942261089
+      GraveWood: -1214579121
+      GreenBookClosed: -1312645803
+      GreenBookOpened: -1716425530
+      KeyGolden: -1302563674
+      LogHorizontal: -1922051245
+      LogVertical: 2026876612
+      MagicBall: 1963299995
+      Pit: 1862998839
+      Pot: -470266132
+      RedBookClosed: 365253014
+      RedBookOpened: 1598080186
+      RedChestClosed: -1853253342
+      RedChestOpened: 1026994049
+      Rock1: -1777327849
+      Rock2: 559205531
+      Scarecrow: -2141092459
+      Skull: 1636701949
+      StatueAngel: 489778044
+      StatueGargoyle: 296210169
+      StatueGoblin: 1542280720
+      Stump1: 247066784
+      Stump2: 698444656
+      TheThrustSword: 826675086
+      Tree1: -7848707938238063223
+      Tree1HorizontalWall: 670235279
+      Tree1VerticalWall: 810116935
+      '[Base]BaseChip_pipo_0': 795745444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
