@@ -16,7 +16,7 @@ public class PropSpawnSystem : MonoBehaviour
         foreach(Transform propSpawnPoint in propSpawnPointList)
         {
             int randomIndex = Random.Range(0, propPrefabList.Count);
-            Instantiate(propPrefabList[randomIndex], propSpawnPoint.position, Quaternion.identity);
+            Instantiate(propPrefabList[randomIndex], propSpawnPoint.position, Quaternion.identity, propSpawnPoint);
         }
     }
 }

@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9d86184b528a54981b52da07696598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 2
+  speed: 6
 --- !u!4 &577712794
 Transform:
   m_ObjectHideFlags: 0
@@ -672,6 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135947477}
   - component: {fileID: 1135947476}
+  - component: {fileID: 1135947478}
   m_Layer: 0
   m_Name: MapController
   m_TagString: Untagged
@@ -715,6 +716,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135947478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135947475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5226c57215454884fa663885cca33a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChunkOptimizationSystem
+  maxOptimizationDistance: 50
 --- !u!1001 &491328349386459265
 PrefabInstance:
   m_ObjectHideFlags: 0

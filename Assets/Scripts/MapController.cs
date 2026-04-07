@@ -19,10 +19,11 @@ public class MapController : MonoBehaviour
     
     private GameObject currentChunk;
     private Vector3 noChunkPosition;
+    private ChunkOptimizationSystem chunkOptimizationSystem;
 
     private void Start()
     {
-        
+        chunkOptimizationSystem = GetComponent<ChunkOptimizationSystem>();
     }
 
     private void Update()
@@ -108,7 +109,8 @@ public class MapController : MonoBehaviour
     private void SpawnChunk()
     {
         int randomIndex = Random.Range(0, mapChunkList.Count);
-        Instantiate(mapChunkList[randomIndex], noChunkPosition, Quaternion.identity);
+        GameObject latestChunk = Instantiate(mapChunkList[randomIndex], noChunkPosition, Quaternion.identity);
+        chunkOptimizationSystem.AddSpawnedChunkInList(latestChunk);
     }
 
     public void SetCurrentChunk(GameObject chunk)
@@ -124,5 +126,10 @@ public class MapController : MonoBehaviour
     public void ClearCurrentChunk()
     {
         currentChunk = null;
+    }
+    
+    public Transform GetPlayerTransform()
+    {
+        return player;
     }
 }
