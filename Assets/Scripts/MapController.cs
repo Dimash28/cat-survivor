@@ -3,133 +3,69 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
-    private const int CHUNK_SIZE = 26;
-    private const string STATIC_POINT_RIGHT = "Right";
-    private const string STATIC_POINT_LEFT = "Left";
-    private const string STATIC_POINT_UP = "Up";
-    private const string STATIC_POINT_DOWN = "Down";
-    private const string STATIC_POINT_RIGHT_UP = "RightUp";
-    private const string STATIC_POINT_LEFT_UP = "LeftUp";
-    private const string STATIC_POINT_RIGHT_DOWN = "RightDown";
-    private const string STATIC_POINT_LEFT_DOWN = "LeftDown";
+    [SerializeField] private Transform mapParent;
     [SerializeField] private List<GameObject> mapChunkList;
-    [SerializeField] private Transform player;
-    [SerializeField] private float checkerRadius;
-    [SerializeField] private LayerMask mapLayerMask;
+    [SerializeField] private Transform mainCamera;
+    [SerializeField] private int loadRadius = 2;
+    [SerializeField] private float chunkSize = 26f;
     
-    private GameObject currentChunk;
-    private Vector3 noChunkPosition;
     private ChunkOptimizationSystem chunkOptimizationSystem;
+    private Dictionary<Vector2Int, GameObject> activeChunkDictionary;
 
-    private void Start()
+    private void Awake()
     {
+        activeChunkDictionary = new Dictionary<Vector2Int, GameObject>();
         chunkOptimizationSystem = GetComponent<ChunkOptimizationSystem>();
     }
 
     private void Update()
     {
-        ChunkChecker();
+        UpdateChunksAroundCamera();
     }
 
-    private void ChunkChecker()
+    private void UpdateChunksAroundCamera()
     {
-        if (!currentChunk)
-        {
-            return;
-        }
-        Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
-        Transform currentChunkStaticPoints = currentChunk.transform.Find("StaticPoints");
+        if(mainCamera == null) return;
 
-        if (inputVector.x > 0 && inputVector.y == 0) //right
+        Vector2Int currentChunkCoordinate = WorldToChunkCoordinate(mainCamera.position);
+
+        for (int x = -loadRadius; x <= loadRadius; x++)
         {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_RIGHT).position, checkerRadius, mapLayerMask))
+            for (int y = -loadRadius; y <= loadRadius; y++)
             {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_RIGHT).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x < 0 && inputVector.y == 0) //left
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_LEFT).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_LEFT).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x == 0 && inputVector.y > 0) //up
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_UP).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_UP).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x == 0 && inputVector.y < 0) //down
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_DOWN).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_DOWN).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x > 0 && inputVector.y > 0) //up-right
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_RIGHT_UP).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_RIGHT_UP).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x < 0 && inputVector.y > 0) //up-Left
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_LEFT_UP).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_LEFT_UP).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x > 0 && inputVector.y < 0) //down-right
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_RIGHT_DOWN).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_RIGHT_DOWN).position;
-                SpawnChunk();
-            }
-        }
-        else if (inputVector.x < 0 && inputVector.y < 0) //down-left
-        {
-            if (!Physics2D.OverlapCircle(currentChunkStaticPoints.Find(STATIC_POINT_LEFT_DOWN).position, checkerRadius, mapLayerMask))
-            {
-                noChunkPosition = currentChunkStaticPoints.Find(STATIC_POINT_LEFT_DOWN).position;
-                SpawnChunk();
+                Vector2Int coordinate = currentChunkCoordinate + new Vector2Int(x, y);
+                if (!activeChunkDictionary.ContainsKey(coordinate))
+                {
+                    SpawnChunkAtCoordinate(coordinate);
+                }
             }
         }
     }
 
-    private void SpawnChunk()
+    private void SpawnChunkAtCoordinate(Vector2Int coordinate)
     {
+        Vector3 spawnPosition = new Vector3(
+            coordinate.x * chunkSize,
+            coordinate.y * chunkSize,
+            0
+        );
+
         int randomIndex = Random.Range(0, mapChunkList.Count);
-        GameObject latestChunk = Instantiate(mapChunkList[randomIndex], noChunkPosition, Quaternion.identity);
+        GameObject latestChunk = Instantiate(mapChunkList[randomIndex], spawnPosition, Quaternion.identity, mapParent);
+
+        activeChunkDictionary.Add(coordinate, latestChunk);
         chunkOptimizationSystem.AddSpawnedChunkInList(latestChunk);
-    }
+    } 
 
-    public void SetCurrentChunk(GameObject chunk)
+    private Vector2Int WorldToChunkCoordinate(Vector3 worldPosition)
     {
-        currentChunk = chunk;
+        return new Vector2Int(
+            Mathf.FloorToInt(worldPosition.x / chunkSize),
+            Mathf.FloorToInt(worldPosition.y / chunkSize)
+        );
     }
-
-    public GameObject GetCurrentChunk()
+    public Transform GetCameraTransform()
     {
-        return currentChunk;
-    }
-
-    public void ClearCurrentChunk()
-    {
-        currentChunk = null;
-    }
-    
-    public Transform GetPlayerTransform()
-    {
-        return player;
+        return mainCamera;
     }
 }

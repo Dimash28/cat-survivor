@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &454971629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454971630}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454971630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454971629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,15 +723,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4c4aeab71a84a4fb8636d4b275868c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapController
+  mapParent: {fileID: 454971630}
   mapChunkList:
   - {fileID: 7446645136738688474, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
   - {fileID: 7446645136738688474, guid: 7358a3cd3c1199f41b6da49bf24155b3, type: 3}
   - {fileID: 7446645136738688474, guid: 8f98e7aa6df68c348a6022a39fcaa917, type: 3}
-  player: {fileID: 577712794}
-  checkerRadius: 0.2
-  mapLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
+  mainCamera: {fileID: 519420032}
+  loadRadius: 1
+  chunkSize: 26
 --- !u!4 &1135947477
 Transform:
   m_ObjectHideFlags: 0
@@ -729,63 +759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkOptimizationSystem
   maxOptimizationDistance: 50
---- !u!1001 &491328349386459265
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858488802625276783, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7446645136738688474, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
-      propertyPath: m_Name
-      value: MapChunk
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee4d1f2e07ec461498a43b69384db73d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -794,5 +767,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 577712794}
   - {fileID: 589886502}
-  - {fileID: 491328349386459265}
   - {fileID: 1135947477}
+  - {fileID: 454971630}

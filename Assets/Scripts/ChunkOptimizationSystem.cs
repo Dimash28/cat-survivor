@@ -35,7 +35,7 @@ public class ChunkOptimizationSystem : MonoBehaviour
                 return;
             }
 
-            Transform player = mapController.GetPlayerTransform();
+            Transform player = mapController.GetCameraTransform();
             optimizationDistance = Vector3.Distance(player.position, chunk.transform.position);
             if(optimizationDistance > maxOptimizationDistance)
             {
