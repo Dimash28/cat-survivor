@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class WeaponManager : MonoBehaviour
 {
     [Header("Starting Weapons")]
-    [SerializeField] private List<Weapon> startingWeapons;   // префабы оружий
+    [SerializeField] private List<Weapon> startingWeapons; 
 
     private List<Weapon> activeWeapons = new List<Weapon>();
 
@@ -24,10 +24,8 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    // Основной метод добавления оружия
     public void AddWeapon(Weapon weaponPrefab)
     {
-        // Создаём экземпляр оружия как ребёнка игрока
         Weapon newWeapon = Instantiate(weaponPrefab, transform);
         newWeapon.transform.localPosition = Vector3.zero;
 
@@ -36,7 +34,6 @@ public class WeaponManager : MonoBehaviour
         Debug.Log($"Weapon added: {newWeapon.name}");
     }
 
-    // Удаление оружия (если понадобится)
     public void RemoveWeapon(Weapon weapon)
     {
         if (activeWeapons.Contains(weapon))
@@ -46,16 +43,13 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    // Получить все активные оружия (если нужно)
     public List<Weapon> GetActiveWeapons()
     {
         return activeWeapons;
     }
 
-    // Опционально: уровень оружия
     public void LevelUpWeapon(Weapon weapon)
     {
-        // Пока заглушка, позже реализуем систему уровней
         Debug.Log($"Leveled up: {weapon.name}");
     }
 }

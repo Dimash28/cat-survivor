@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponDataSO
   weaponName: Knife
   icon: {fileID: -2472801792072297344, guid: 1adb5c8d6614d4f47a3e837ed6613e89, type: 3}
-  damage: 2
-  cooldown: 0.8
+  damage: 20
+  cooldown: 0.9
   projectileSpeed: 5
   projectileCount: 1
+  pierce: 1
   projectilePrefab: {fileID: 8213430039450639697, guid: 1c242311f7ad7954ea525ef9e0aa7f1e, type: 3}
+  auraRadius: 0.1
+  tickRate: 0.1
+  auraPrefab: {fileID: 0}

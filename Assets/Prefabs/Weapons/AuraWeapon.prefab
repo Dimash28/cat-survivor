@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 288917941
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2141188580037841102, guid: 0b63bc535c209ea418a19e352f87cacf, type: 3}
@@ -100,8 +100,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435039487187800549}
-  - component: {fileID: -1769765690377157718}
   - component: {fileID: 2924492284201372480}
+  - component: {fileID: -1769765690377157718}
   m_Layer: 0
   m_Name: AuraWeapon
   m_TagString: Untagged
@@ -125,19 +125,6 @@ Transform:
   - {fileID: 6964439684183401206}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1769765690377157718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6191553341384629323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5fa8af41c9c40a47b8a474705ab6d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AuraWeapon
-  weaponDataSO: {fileID: 11400000, guid: 08655b43f3876764789d28e707462472, type: 2}
 --- !u!58 &2924492284201372480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -174,3 +161,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.2}
   m_Radius: 0.59
+--- !u!114 &-1769765690377157718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191553341384629323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fa8af41c9c40a47b8a474705ab6d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraWeapon
+  weaponDataSO: {fileID: 11400000, guid: 08655b43f3876764789d28e707462472, type: 2}

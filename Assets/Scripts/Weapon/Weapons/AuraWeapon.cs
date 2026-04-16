@@ -13,9 +13,9 @@ public class AuraWeapon : Weapon
 
     private void CreateAuraVisual()
     {
-        if (runtimeDataSO.auraPrefab != null)
+        if (runtimeDataSO.AuraPrefab != null)
         {
-            auraVisual = Instantiate(runtimeDataSO.auraPrefab, transform);
+            auraVisual = Instantiate(runtimeDataSO.AuraPrefab, transform);
         }
     }
 
@@ -28,7 +28,7 @@ public class AuraWeapon : Weapon
         if (tickTimer <= 0f)
         {
             Attack();
-            tickTimer = runtimeDataSO.tickRate;
+            tickTimer = runtimeDataSO.TickRate;
         }
     }
 

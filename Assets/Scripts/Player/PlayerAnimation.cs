@@ -25,7 +25,6 @@ public class PlayerAnimation : MonoBehaviour
 
             lastInputVector = inputVector;
 
-            //SetFloat
             animator.SetFloat("InputX", inputVector.x);
             animator.SetFloat("InputY", inputVector.y);
         }

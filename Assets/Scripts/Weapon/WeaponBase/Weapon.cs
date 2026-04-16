@@ -10,7 +10,6 @@ public abstract class Weapon : MonoBehaviour
     {
         if (weaponDataSO != null)
         {
-            // Создаём копию ScriptableObject при старте
             runtimeDataSO = Instantiate(weaponDataSO);
         }
         else
@@ -25,7 +24,7 @@ public abstract class Weapon : MonoBehaviour
         if (timer <= 0)
         {
             Attack();
-            timer = weaponDataSO.cooldown;
+            timer = weaponDataSO.Cooldown;
         }
     }
 

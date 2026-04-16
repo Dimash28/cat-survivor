@@ -26,11 +26,15 @@ public class KnifeWeapon : Weapon
     {
         if(runtimeDataSO == null) return;
 
-        for (int i = 0; i < runtimeDataSO.projectileCount; i++)
+        for (int i = 0; i < runtimeDataSO.ProjectileCount; i++)
         {
-            float angleOffset = (i - (runtimeDataSO.projectileCount - 1) / 2f) * 15f;
+            float angleOffset = (i - (runtimeDataSO.ProjectileCount - 1) / 2f) * 15f;
 
-            GameObject knife = Instantiate(runtimeDataSO.projectilePrefab, transform.position + new Vector3(0, 0.3f, 0), Quaternion.identity);
+            GameObject knife = Instantiate(
+                runtimeDataSO.ProjectilePrefab, 
+                transform.position + new Vector3(0, 0.3f, 0), 
+                Quaternion.identity
+            );
 
             Vector2 direction;
 
@@ -39,7 +43,7 @@ public class KnifeWeapon : Weapon
             Projectile proj = knife.GetComponent<Projectile>();
             if (proj != null)
             {
-                proj.Setup(direction * runtimeDataSO.projectileSpeed, runtimeDataSO.damage);
+                proj.Setup(direction, runtimeDataSO);
             }
         }
     }
