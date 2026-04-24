@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerAnimation : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        Player.Instance.GetHealthSystem().OnDamageTaken += PlayerHealthSystem_OnDamageTaken;
     }
 
     private void Update()
@@ -35,5 +38,15 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetFloat("LastInputX", lastInputVector.x);
             animator.SetFloat("LastInputY", lastInputVector.y);
         }
+    }
+
+    private void PlayerHealthSystem_OnDamageTaken()
+    {
+        PlayShakeAnimation();
+    }
+
+    private void PlayShakeAnimation()
+    {
+        animator.SetTrigger("DamageTaken");
     }
 }

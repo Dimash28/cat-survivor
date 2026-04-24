@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour
     public bool IsDead => CurrentHealth <= 0;
 
     public event System.Action OnDeath;
+    public event System.Action OnDamageTaken;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class HealthSystem : MonoBehaviour
         if (IsDead) return;
 
         CurrentHealth -= damage;
+        OnDamageTaken?.Invoke();
 
         if (IsDead)
         {
@@ -28,5 +30,15 @@ public class HealthSystem : MonoBehaviour
         }
 
         Debug.Log(CurrentHealth);
+    }
+
+    public float GetCurrentHealth()
+    {
+        return CurrentHealth;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
     }
 }
