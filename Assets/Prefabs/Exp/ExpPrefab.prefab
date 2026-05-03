@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7771609881608339454}
   - component: {fileID: 4045996347847323700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 442528326528679570}
   - component: {fileID: -6298849829857891469}
   - component: {fileID: 3776732428529474244}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExpPrefab
   m_TagString: Exp
   m_Icon: {fileID: 0}

@@ -1,12 +1,13 @@
+using System;
 using UnityEngine;
 
 public class ExperienceSystem : MonoBehaviour
 {
     public static ExperienceSystem Instance {get; private set;}
 
-    public event System.Action OnExpGained;
-    public event System.Action OnCurrentExpAmountReset;
-    public event System.Action OnLevelUp;
+    public event Action OnExpGained;
+    public event Action OnCurrentExpAmountReset;
+    public event Action OnLevelUp;
 
     private int level;
     private float currentExpAmountToNextLevel;

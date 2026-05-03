@@ -30,10 +30,10 @@ public class Projectile : MonoBehaviour
     public void Setup(Vector2 direction, WeaponDataSO weaponDataSO)
     {
         
-        currentDamage = weaponDataSO.Damage;
-        currentSpeed = weaponDataSO.ProjectileSpeed;
-        currentCooldown = weaponDataSO.Cooldown;
-        currentPierce = weaponDataSO.Pierce;
+        currentDamage = weaponDataSO.damage;
+        currentSpeed = weaponDataSO.projectileSpeed;
+        currentCooldown = weaponDataSO.cooldown;
+        currentPierce = weaponDataSO.pierce;
 
         velocity = direction * currentSpeed;
         float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
