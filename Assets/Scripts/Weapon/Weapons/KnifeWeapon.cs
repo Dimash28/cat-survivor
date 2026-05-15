@@ -31,7 +31,7 @@ public class KnifeWeapon : Weapon
             float angleOffset = (i - (runtimeDataSO.projectileCount - 1) / 2f) * 15f;
 
             GameObject knife = Instantiate(
-                runtimeDataSO.projectilePrefab, 
+                runtimeDataSO.prefab, 
                 transform.position + new Vector3(0, 0.3f, 0), 
                 Quaternion.identity
             );
@@ -44,6 +44,10 @@ public class KnifeWeapon : Weapon
             if (proj != null)
             {
                 proj.Setup(direction, runtimeDataSO);
+            }
+            else
+            {
+                Debug.LogError("Projectile component not found on prefab!");
             }
         }
     }

@@ -9,6 +9,8 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Awake()
     {
+        runtimeDataSO = null;
+        
         if (weaponDataSO != null)
         {
             runtimeDataSO = Instantiate(weaponDataSO);
@@ -38,9 +40,7 @@ public abstract class Weapon : MonoBehaviour
             switch (effect.type)
             {
                 case UpgradeType.Damage:
-                    Debug.Log("Damage Before Upgrade " + runtimeDataSO.damage);
                     runtimeDataSO.damage += effect.value;
-                    Debug.Log("Damage After Upgrade " + runtimeDataSO.damage);
                     break;
 
                 case UpgradeType.Cooldown:
@@ -48,11 +48,18 @@ public abstract class Weapon : MonoBehaviour
                         runtimeDataSO.cooldown -= effect.value;
                     else 
                         return;
-                    
                     break;
 
                 case UpgradeType.ProjectileCount:
                     runtimeDataSO.projectileCount += (int)effect.value;
+                    break;
+
+                case UpgradeType.ProjectileSpeed:
+                    runtimeDataSO.projectileSpeed += effect.value;
+                    break;
+                
+                case UpgradeType.Pierce:
+                    runtimeDataSO.pierce += (int)effect.value;
                     break;
             }
         }

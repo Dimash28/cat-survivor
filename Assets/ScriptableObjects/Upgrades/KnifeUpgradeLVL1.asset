@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Knife Upgrade 1 LVL
   weaponDataSO: {fileID: 11400000, guid: a67a06ecd2b941641ac79078b2143fe0, type: 2}
+  level: 1
+  previousUpgradeDataSO: {fileID: 11400000, guid: 485ecb951d9059541ac911fe8035be2f, type: 2}
   upgradeEffectList:
   - {fileID: 7256999395599785388, guid: dbe40c803fe6ce54d8e8d826df770b3c, type: 3}
   - {fileID: 7256999395599785388, guid: 475d55650363a1f44ad8e1273fe67662, type: 3}

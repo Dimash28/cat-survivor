@@ -1,13 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     [SerializeField] private EnemyDataSO enemyDataSO;
-    [SerializeField] private int experienceValue = 5;
+    [SerializeField] private Transform spriteTransform;
+    [SerializeField] private List<int> timeToSpawnList;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private HealthSystem healthSystem;
     private EnemyDataSO runtimeDataSO;
+    private Vector3 originalPosition;
+    private HitEffect hitEffect;
+    private bool isDying = false;
 
     protected virtual void Awake()
     {
@@ -28,25 +36,22 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void Start() 
+    {
+        hitEffect = GetComponent<HitEffect>();
+    }
+
     protected virtual void Update()
     {
         if (healthSystem.IsDead) 
             return;
-
-        MoveTowardsPlayer();
     }
-
-    protected virtual void MoveTowardsPlayer()
-    {
-        Vector2 direction = (Player.Instance.GetPlayerPosition() - transform.position).normalized;
-        transform.position += (Vector3)direction * runtimeDataSO.MoveSpeed * Time.deltaTime;
-    }
-
 
     protected virtual void OnEnable()
     {
         if (healthSystem != null)
         {
+            healthSystem.OnDamageTaken += OnDamageTaken;
             healthSystem.OnDeath += OnDeath;
         }
     }
@@ -55,12 +60,30 @@ public class Enemy : MonoBehaviour
     {
         if (healthSystem != null)
         {
+            healthSystem.OnDamageTaken -= OnDamageTaken;
             healthSystem.OnDeath -= OnDeath;
         }
     }
 
+    private void OnDamageTaken()
+    {
+        if (isDying) return;
+
+        hitEffect.PlayHitEffect();
+    }
+
     protected virtual void OnDeath()
     {
+        if (isDying) return;
+        isDying = true;
+
+        StartCoroutine(DeathCoroutine());
+    }
+
+    private IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(0.15f);
+
         Destroy(gameObject);
     }
 
@@ -86,5 +109,15 @@ public class Enemy : MonoBehaviour
     public HealthSystem GetHealthSystem()
     {
         return healthSystem;
+    }
+
+    public List<int> GetTimeToSpawn()
+    {
+        return timeToSpawnList;
+    }
+
+    public EnemyDataSO GetRuntimeDataSO()
+    {
+        return runtimeDataSO;
     }
 }

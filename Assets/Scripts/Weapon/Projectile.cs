@@ -21,15 +21,17 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        timer = lifeTime;
-        delayTimer = delay;
-
         boxCollider2D.enabled = false;
     }
 
     public void Setup(Vector2 direction, WeaponDataSO weaponDataSO)
     {
-        
+        if (weaponDataSO == null) 
+        {
+            Debug.LogError("WeaponDataSO is null in Setup!");
+            return;
+        }
+
         currentDamage = weaponDataSO.damage;
         currentSpeed = weaponDataSO.projectileSpeed;
         currentCooldown = weaponDataSO.cooldown;
@@ -38,6 +40,9 @@ public class Projectile : MonoBehaviour
         velocity = direction * currentSpeed;
         float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        timer = lifeTime;
+        delayTimer = delay;
     }
 
     private void Update()
@@ -59,7 +64,10 @@ public class Projectile : MonoBehaviour
 
     private void ReducePierce()
     {
+        Debug.Log("ReducePierce()");
+        Debug.Log("CurrentPierce = " + currentPierce);
         currentPierce--;
+        Debug.Log("CurrentPierce = " + currentPierce);
         if (currentPierce <= 0)
         {
             Destroy(gameObject);
@@ -76,6 +84,7 @@ public class Projectile : MonoBehaviour
             Debug.Log("Tag Enemy");
             Enemy enemy = other.GetComponent<Enemy>();
             enemy.TakeDamage(currentDamage);
+            Debug.Log("ProjectileOnTriggerEnter2D");
             ReducePierce();
         }
     }

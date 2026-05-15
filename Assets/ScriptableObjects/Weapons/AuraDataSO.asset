@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponDataSO
   weaponName: Aura
   icon: {fileID: 2141188580037841102, guid: 0b63bc535c209ea418a19e352f87cacf, type: 3}
+  prefab: {fileID: 6191553341384629323, guid: 3f6dcd1529fae6749a855fc728fda061, type: 3}
   damage: 5
   cooldown: 1
   projectileSpeed: 0
   projectileCount: 1
   pierce: 1
-  projectilePrefab: {fileID: 0}
   auraRadius: 3
-  auraPrefab: {fileID: 6191553341384629323, guid: 3f6dcd1529fae6749a855fc728fda061, type: 3}

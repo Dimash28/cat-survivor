@@ -4,16 +4,21 @@ public class Player : MonoBehaviour
 {
     public static Player Instance {get; private set;}
 
+    private HitEffect hitEffect;
     private HealthSystem healthSystem;
+    
 
     private void Awake()
     {
         Instance = this;
-    }
 
-    private void Start()
-    {
         healthSystem = GetComponent<HealthSystem>();
+        healthSystem.OnDamageTaken += OnDamageTaken;
+    }
+    
+    private void Start() 
+    {
+        hitEffect = GetComponentInChildren<HitEffect>();
     }
 
     public Vector3 GetPlayerPosition()
@@ -26,14 +31,16 @@ public class Player : MonoBehaviour
         return healthSystem;
     }
 
-    public virtual void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
-        Debug.Log("PlayerTookDamage");
-
         if (healthSystem != null)
         {
-            Debug.Log("Player is not null");
             healthSystem.TakeDamage(damage);
         }
+    }
+
+    private void OnDamageTaken()
+    {
+        hitEffect.PlayHitEffect();
     }
 }

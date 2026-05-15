@@ -4,7 +4,7 @@ using UnityEngine;
 public class UpgradeButtonRandomizer : MonoBehaviour
 {
     [SerializeField] private List<UpgradeDataSO> upgradeDataSOList;
-    [SerializeField] private List<UpgradeButtonData> upgradeButtonDataList; // можно оставить для ручного заполнения
+    [SerializeField] private List<UpgradeButtonData> upgradeButtonDataList;
 
     private void Start()
     {
@@ -18,22 +18,67 @@ public class UpgradeButtonRandomizer : MonoBehaviour
 
     private void RandomizeUpgradeButtons()
     {
-        if (upgradeDataSOList == null || upgradeDataSOList.Count == 0)
+        List<UpgradeDataSO> playerUpgradeList = UpgradeSystem.Instance.GetPlayerUpgradeList();
+
+        foreach (UpgradeButtonData button in upgradeButtonDataList)
         {
-            Debug.LogError("upgradeDataSOList is empty!");
-            return;
+            if (button == null) continue;
+
+            UpgradeDataSO selected = GetValidRandomUpgrade(upgradeDataSOList, playerUpgradeList);
+
+            if(playerUpgradeList.Contains(selected)) continue;
+
+            if (selected != null)
+            {
+                button.SetUpgradeDataSO(selected);
+            }
+        }
+    }
+
+    private UpgradeDataSO GetValidRandomUpgrade(List<UpgradeDataSO> upgradeDataSOList, List<UpgradeDataSO> playerUpgradeList)
+    {
+        List<UpgradeDataSO> shuffledUpgradeDataSOList = new List<UpgradeDataSO>(upgradeDataSOList);
+        ShuffleUpgradeDataSOList(shuffledUpgradeDataSOList);
+
+        foreach (var upgradeDataSO in shuffledUpgradeDataSOList)
+        {
+            if (IsUpgradeAvailable(upgradeDataSO, playerUpgradeList))
+            {
+                return upgradeDataSO;
+            }
         }
 
-        foreach (UpgradeButtonData upgradeButtonData in upgradeButtonDataList)
+        return null;
+    }
+
+    private bool IsUpgradeAvailable(UpgradeDataSO upgradeDataSO, List<UpgradeDataSO> playerUpgradeList)
+    {
+        if (upgradeDataSO.level == 0)
+            return true;
+
+        foreach (var owned in playerUpgradeList)
         {
-            if (upgradeButtonData == null) continue;
+            if(owned == upgradeDataSO) return false;
 
-            int randomIndex = Random.Range(0, upgradeDataSOList.Count);
-            UpgradeDataSO selected = upgradeDataSOList[randomIndex];
+            if (owned == upgradeDataSO.previousUpgradeDataSO)
+            {
+                return true;
+            }
+        }
 
-            upgradeButtonData.SetUpgradeDataSO(selected);
+        return false;
+    }
 
-            Debug.Log($"Set upgrade on {upgradeButtonData.name}: {selected.name} | Weapon: {selected.weaponDataSO?.weaponName}");
+    public void ShuffleUpgradeDataSOList(List<UpgradeDataSO> upgradeDataSOList)
+    {
+        int n = upgradeDataSOList.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            UpgradeDataSO value = upgradeDataSOList[k];
+            upgradeDataSOList[k] = upgradeDataSOList[n];
+            upgradeDataSOList[n] = value;
         }
     }
 }

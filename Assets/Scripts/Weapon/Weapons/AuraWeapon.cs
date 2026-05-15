@@ -27,9 +27,9 @@ public class AuraWeapon : Weapon
 
     private void CreateAuraVisual()
     {
-        if (runtimeDataSO.auraPrefab != null)
+        if (runtimeDataSO.prefab != null)
         {
-            auraVisual = Instantiate(runtimeDataSO.auraPrefab, transform);
+            auraVisual = Instantiate(runtimeDataSO.prefab, transform);
             auraAnimator = auraVisual.GetComponentInChildren<Animator>();
         }
     }

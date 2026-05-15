@@ -27,6 +27,16 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnPos = Player.Instance.GetPlayerPosition() + (Vector3)randomDir * spawnRadius;
 
         int randomIndex = Random.Range(0, enemyPrefabs.Count);
-        Instantiate(enemyPrefabs[randomIndex], spawnPos, Quaternion.identity);
+
+        int gamePlayingTimeInMinutes = 
+            Mathf.CeilToInt(GameManager.Instance.GetGamePlayingTime() / 60f);
+
+        int gamePlayingTimeInMinutesInverted = 
+            GameManager.Instance.GetMaxGameTimeInMinutes() - gamePlayingTimeInMinutes;
+
+        if(enemyPrefabs[randomIndex].GetTimeToSpawn().Contains(gamePlayingTimeInMinutesInverted))
+        {
+            Instantiate(enemyPrefabs[randomIndex], spawnPos, Quaternion.identity);
+        }
     }
 }

@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    private Animator animator;
+    [SerializeField] private Animator playerShadowAnimator;
+    private Animator playerAnimator;
+    private SpriteRenderer spriteRenderer;
+    private Vector3 originalPosition;
     private Vector2 lastInputVector;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-
-        Player.Instance.GetHealthSystem().OnDamageTaken += PlayerHealthSystem_OnDamageTaken;
+        playerAnimator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -24,29 +26,56 @@ public class PlayerAnimation : MonoBehaviour
 
         if (inputVector != Vector2.zero)
         {
-            animator.SetBool("IsWalking", true);
+            playerAnimator.SetBool("IsWalking", true);
+            playerShadowAnimator.SetBool("IsWalking", true);
 
             lastInputVector = inputVector;
 
-            animator.SetFloat("InputX", inputVector.x);
-            animator.SetFloat("InputY", inputVector.y);
+            playerAnimator.SetFloat("InputX", inputVector.x);
+            playerAnimator.SetFloat("InputY", inputVector.y);
+            playerShadowAnimator.SetFloat("InputX", inputVector.x);
+            playerShadowAnimator.SetFloat("InputY", inputVector.y);
         }
         else
         {
-            animator.SetBool("IsWalking", false);
+            playerAnimator.SetBool("IsWalking", false);
+            playerShadowAnimator.SetBool("IsWalking", false);
 
-            animator.SetFloat("LastInputX", lastInputVector.x);
-            animator.SetFloat("LastInputY", lastInputVector.y);
+            playerAnimator.SetFloat("LastInputX", lastInputVector.x);
+            playerAnimator.SetFloat("LastInputY", lastInputVector.y);
+            playerShadowAnimator.SetFloat("LastInputX", lastInputVector.x);
+            playerShadowAnimator.SetFloat("LastInputY", lastInputVector.y);
         }
     }
 
-    private void PlayerHealthSystem_OnDamageTaken()
+    public void PlayHitEffect()
     {
-        PlayShakeAnimation();
+        originalPosition = transform.position;
+        StartCoroutine(HitEffectCoroutine());
     }
 
-    private void PlayShakeAnimation()
+    private IEnumerator HitEffectCoroutine()
     {
-        animator.SetTrigger("DamageTaken");
+        float duration = 0.15f;
+        float shakeAmount = 0.08f;
+        Color originalColor = spriteRenderer.color;
+
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+
+            float offsetX = Random.Range(-shakeAmount, shakeAmount);
+            float offsetY = Random.Range(-shakeAmount, shakeAmount);
+            transform.position = originalPosition + new Vector3(offsetX, offsetY, 0);
+
+            spriteRenderer.color = Color.red;
+
+            yield return null;
+        }
+
+        transform.position = originalPosition;
+        spriteRenderer.color = originalColor;
     }
 }

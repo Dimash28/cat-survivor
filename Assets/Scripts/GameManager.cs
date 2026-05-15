@@ -1,19 +1,29 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
-    [SerializeField] private float maxGameTimeInMinutes = 15f;
+    [SerializeField] private int maxGameTimeInMinutes = 15;
+
+    public Action OnGameOver;
 
     private float gameStartingTimer = 3f;
     private float gamePlayingTimer;
     private bool isPaused;
+    private bool isGameOver;
     private GameState state;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
 
         gamePlayingTimer = maxGameTimeInMinutes * 60f;
@@ -37,22 +47,31 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case GameState.GameStarting:
-                gameStartingTimer -= Time.deltaTime;
+                isGameOver = false;
+                Time.timeScale = 0;
+
+                gameStartingTimer -= Time.unscaledDeltaTime;
                 if(gameStartingTimer <= 0f)
                 {
+                    Time.timeScale = 1;
                     state = GameState.GamePlaying;
                 }
-            break;
+                break;
+
             case GameState.GamePlaying:
                 gamePlayingTimer -= Time.deltaTime;
-                if(gamePlayingTimer <= 0f)
+                if(gamePlayingTimer <= 0f || Player.Instance.GetHealthSystem().IsDead)
                 {
                     state = GameState.GameOver;
                 }
-            break;
+                break;
+
             case GameState.GameOver:
-                
-            break;
+                isGameOver = true;
+                SetOnPause();
+
+                OnGameOver?.Invoke();
+                break;
         }
     }
 
@@ -60,6 +79,11 @@ public class GameManager : MonoBehaviour
     {
         if (!isPaused) SetOnPause();
         else SetUnpause();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void SetOnPause()
@@ -74,5 +98,20 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
+    }
+
+    public bool IsGameOver()
+    {
+        return isGameOver;
+    }
+    
+    public float GetGamePlayingTime()
+    {
+        return gamePlayingTimer;
+    }
+
+    public int GetMaxGameTimeInMinutes()
+    {
+        return maxGameTimeInMinutes;
     }
 }
