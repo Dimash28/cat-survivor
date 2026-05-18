@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UpgradeButtonRandomizer : MonoBehaviour
@@ -19,66 +20,75 @@ public class UpgradeButtonRandomizer : MonoBehaviour
     private void RandomizeUpgradeButtons()
     {
         List<UpgradeDataSO> playerUpgradeList = UpgradeSystem.Instance.GetPlayerUpgradeList();
+        List<UpgradeDataSO> availableUpgrades = GetAvailableUpgrades(playerUpgradeList);
+
+        if (availableUpgrades.Count == 0)
+        {
+            foreach (var button in upgradeButtonDataList)
+                button?.SetUpgradeDataSO(null);
+            return;
+        }
+
+        ShuffleUpgradeDataSOList(availableUpgrades);
+
+        int index = 0;
 
         foreach (UpgradeButtonData button in upgradeButtonDataList)
         {
             if (button == null) continue;
 
-            UpgradeDataSO selected = GetValidRandomUpgrade(upgradeDataSOList, playerUpgradeList);
-
-            if(playerUpgradeList.Contains(selected)) continue;
-
-            if (selected != null)
+            if (index >= availableUpgrades.Count)
             {
-                button.SetUpgradeDataSO(selected);
+                ShuffleUpgradeDataSOList(availableUpgrades);
+                index = 0;
             }
+
+            button.SetUpgradeDataSO(availableUpgrades[index]);
+            index++;
         }
     }
 
-    private UpgradeDataSO GetValidRandomUpgrade(List<UpgradeDataSO> upgradeDataSOList, List<UpgradeDataSO> playerUpgradeList)
+    private List<UpgradeDataSO> GetAvailableUpgrades(List<UpgradeDataSO> ownedUpgrades)
     {
-        List<UpgradeDataSO> shuffledUpgradeDataSOList = new List<UpgradeDataSO>(upgradeDataSOList);
-        ShuffleUpgradeDataSOList(shuffledUpgradeDataSOList);
+        List<UpgradeDataSO> available = new List<UpgradeDataSO>();
 
-        foreach (var upgradeDataSO in shuffledUpgradeDataSOList)
+        foreach (var upgradeDataSO in upgradeDataSOList)
         {
-            if (IsUpgradeAvailable(upgradeDataSO, playerUpgradeList))
-            {
-                return upgradeDataSO;
-            }
+            if (IsUpgradeAvailable(upgradeDataSO, ownedUpgrades))
+                available.Add(upgradeDataSO);
         }
 
-        return null;
+        return available;
     }
 
     private bool IsUpgradeAvailable(UpgradeDataSO upgradeDataSO, List<UpgradeDataSO> playerUpgradeList)
     {
         if (upgradeDataSO.level == 0)
-            return true;
+            return !playerUpgradeList.Any(o => o.baseUpgradeDataSO == upgradeDataSO || o == upgradeDataSO);
 
-        foreach (var owned in playerUpgradeList)
-        {
-            if(owned == upgradeDataSO) return false;
+        UpgradeDataSO previous = upgradeDataSO.previousUpgradeDataSO;
 
-            if (owned == upgradeDataSO.previousUpgradeDataSO)
-            {
-                return true;
-            }
-        }
+        if (previous == null) return false;
 
-        return false;
+        bool hasPrevious = playerUpgradeList.Any(o => o == previous);
+
+        if (!hasPrevious) return false;
+
+        return !playerUpgradeList.Any(o => 
+            o.baseUpgradeDataSO == upgradeDataSO.baseUpgradeDataSO && 
+            o.level >= upgradeDataSO.level);
     }
 
-    public void ShuffleUpgradeDataSOList(List<UpgradeDataSO> upgradeDataSOList)
+    private void ShuffleUpgradeDataSOList(List<UpgradeDataSO> list)
     {
-        int n = upgradeDataSOList.Count;
+        if (list == null || list.Count <= 1) return;
+
+        int n = list.Count;
         while (n > 1)
         {
             n--;
             int k = Random.Range(0, n + 1);
-            UpgradeDataSO value = upgradeDataSOList[k];
-            upgradeDataSOList[k] = upgradeDataSOList[n];
-            upgradeDataSOList[n] = value;
+            (list[k], list[n]) = (list[n], list[k]);
         }
     }
 }

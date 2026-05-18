@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
 
     private HealthSystem healthSystem;
     private EnemyDataSO runtimeDataSO;
-    private Vector3 originalPosition;
     private HitEffect hitEffect;
     private bool isDying = false;
 
@@ -34,6 +33,8 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError($"EnemyDataSO is not assigned on {gameObject.name}");
         }
+
+        healthSystem.SetMaxHealth(runtimeDataSO.MaxHealth);
     }
 
     private void Start() 

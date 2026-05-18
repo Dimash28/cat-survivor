@@ -16,6 +16,7 @@ MonoBehaviour:
   weaponDataSO: {fileID: 11400000, guid: a67a06ecd2b941641ac79078b2143fe0, type: 2}
   level: 3
   previousUpgradeDataSO: {fileID: 11400000, guid: 47c1ff4bf54243a4298c2e73205dda80, type: 2}
+  baseUpgradeDataSO: {fileID: 11400000, guid: 485ecb951d9059541ac911fe8035be2f, type: 2}
   upgradeEffectList:
   - {fileID: 7256999395599785388, guid: 18fd004e24d4b934e8333412ee85cafc, type: 3}
   - {fileID: 7256999395599785388, guid: 6ca95bdf37595684c852997b7f9cf14c, type: 3}

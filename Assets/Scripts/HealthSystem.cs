@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float maxHealth;
 
     public float CurrentHealth { get; private set; }
 
@@ -10,8 +10,9 @@ public class HealthSystem : MonoBehaviour
 
     public event System.Action OnDeath;
     public event System.Action OnDamageTaken;
+    public event System.Action OnHeal;
 
-    private void Awake()
+    private void Start()
     {
         CurrentHealth = maxHealth;
     }
@@ -40,5 +41,18 @@ public class HealthSystem : MonoBehaviour
     public float GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    public void SetMaxHealth(float maxHealth)
+    {
+        this.maxHealth = maxHealth;
+    }
+
+    public void Heal(float healAmount)
+    {
+        CurrentHealth += healAmount;
+        CurrentHealth = Mathf.Min(CurrentHealth, maxHealth);
+
+        OnHeal?.Invoke();
     }
 }

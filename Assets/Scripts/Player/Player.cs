@@ -1,3 +1,4 @@
+using System.Net.Cache;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -36,6 +37,18 @@ public class Player : MonoBehaviour
         if (healthSystem != null)
         {
             healthSystem.TakeDamage(damage);
+        }
+    }
+
+    public void Heal(float healAmount)
+    {
+        if (healthSystem != null)
+        {
+            healthSystem.Heal(healAmount);
+        }
+        else
+        {
+            Debug.LogError("HealthSystem is NULL in Player!");
         }
     }
 

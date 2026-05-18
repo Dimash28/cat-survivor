@@ -9,6 +9,7 @@ public class UpgradeDataSO : ScriptableObject
 
     public int level;
     public UpgradeDataSO previousUpgradeDataSO;
+    public UpgradeDataSO baseUpgradeDataSO;
 
     public List<UpgradeEffect> upgradeEffectList;
 }

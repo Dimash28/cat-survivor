@@ -10,6 +10,8 @@ public class PlayerHealthBarUI : MonoBehaviour
     private void Start()
     {
         healthSystem.OnDamageTaken += HealthSystem_OnDamageTaken;
+        healthSystem.OnHeal += HealthSystem_OnHeal;
+
         Hide();
     }
 
@@ -21,7 +23,16 @@ public class PlayerHealthBarUI : MonoBehaviour
     private void HealthSystem_OnDamageTaken()
     {
         Show();
+        
         UpdateHealthBarUI();
+    }
+
+    private void HealthSystem_OnHeal()
+    {
+        UpdateHealthBarUI();
+
+        if (healthBar.fillAmount == 1)
+            Hide();
     }
 
     private void Show()

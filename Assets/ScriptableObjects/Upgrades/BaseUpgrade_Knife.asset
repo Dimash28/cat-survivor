@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af54e17bfa6588f48ad3604d7c10ce88, type: 3}
-  m_Name: NewWeapon_Knife
+  m_Name: BaseUpgrade_Knife
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Knife Weapon
   weaponDataSO: {fileID: 11400000, guid: a67a06ecd2b941641ac79078b2143fe0, type: 2}
   level: 0
+  previousUpgradeDataSO: {fileID: 0}
+  baseUpgradeDataSO: {fileID: 0}
   upgradeEffectList: []

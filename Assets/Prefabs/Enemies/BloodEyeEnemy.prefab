@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: enemyDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: f97ee8df19ee7c54d9a1dc5d9cdb109d, type: 2}
+    - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: timeToSpawn
       value: 15
       objectReference: {fileID: 0}

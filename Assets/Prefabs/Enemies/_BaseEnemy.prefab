@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26f186e192096b4e83293a69f8efd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyDataSO: {fileID: 11400000, guid: f97ee8df19ee7c54d9a1dc5d9cdb109d, type: 2}
+  enemyDataSO: {fileID: 0}
   spriteTransform: {fileID: 1603242026734810463}
   timeToSpawnList: 
   spriteRenderer: {fileID: 0}
