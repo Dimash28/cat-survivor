@@ -55,6 +55,9 @@ TagManager:
   - name: Buildings
     uniqueID: 906172087
     locked: 0
+  - name: WorldUI
+    uniqueID: 3133039005
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []

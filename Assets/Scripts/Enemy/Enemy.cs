@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyDataSO enemyDataSO;
     [SerializeField] private Transform spriteTransform;
     [SerializeField] private List<int> timeToSpawnList;
-    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private HealthSystem healthSystem;
     private EnemyDataSO runtimeDataSO;

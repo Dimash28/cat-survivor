@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8646617030031877004, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: expPrefab
+      value: 
+      objectReference: {fileID: 2266319183951566191, guid: ad4bda0f271841644a02004c8ef20815, type: 3}
     - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.x
       value: 1

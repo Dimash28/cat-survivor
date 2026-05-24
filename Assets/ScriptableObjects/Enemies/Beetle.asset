@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
   moveSpeed: 1.2
   maxHealth: 30
-  damage: 8
+  damage: 7

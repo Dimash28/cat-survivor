@@ -7,8 +7,14 @@ public class TimerUI : MonoBehaviour
 
     private float time;
 
-    private void Update() {
-        time += Time.deltaTime;
+    private void Start() 
+    {
+        time = GameManager.Instance.GetGamePlayingTime();
+    }
+
+    private void Update() 
+    {
+        time -= Time.deltaTime;
 
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);
