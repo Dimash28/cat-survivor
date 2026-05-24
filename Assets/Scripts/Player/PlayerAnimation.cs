@@ -5,14 +5,11 @@ public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator playerShadowAnimator;
     private Animator playerAnimator;
-    private SpriteRenderer spriteRenderer;
-    private Vector3 originalPosition;
     private Vector2 lastInputVector;
 
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -26,56 +23,25 @@ public class PlayerAnimation : MonoBehaviour
 
         if (inputVector != Vector2.zero)
         {
-            playerAnimator.SetBool("IsWalking", true);
-            playerShadowAnimator.SetBool("IsWalking", true);
-
             lastInputVector = inputVector;
 
-            playerAnimator.SetFloat("InputX", inputVector.x);
-            playerAnimator.SetFloat("InputY", inputVector.y);
-            playerShadowAnimator.SetFloat("InputX", inputVector.x);
-            playerShadowAnimator.SetFloat("InputY", inputVector.y);
+            SetAnimatorParameters(true, inputVector.x, inputVector.y, lastInputVector.x, lastInputVector.y);
         }
         else
         {
-            playerAnimator.SetBool("IsWalking", false);
-            playerShadowAnimator.SetBool("IsWalking", false);
-
-            playerAnimator.SetFloat("LastInputX", lastInputVector.x);
-            playerAnimator.SetFloat("LastInputY", lastInputVector.y);
-            playerShadowAnimator.SetFloat("LastInputX", lastInputVector.x);
-            playerShadowAnimator.SetFloat("LastInputY", lastInputVector.y);
+            SetAnimatorParameters(false, inputVector.x, inputVector.y, lastInputVector.x, lastInputVector.y);
         }
     }
 
-    public void PlayHitEffect()
+    private void SetAnimatorParameters(bool isWalking, float x, float y, float lastX, float lastY)
     {
-        originalPosition = transform.position;
-        StartCoroutine(HitEffectCoroutine());
-    }
-
-    private IEnumerator HitEffectCoroutine()
-    {
-        float duration = 0.15f;
-        float shakeAmount = 0.08f;
-        Color originalColor = spriteRenderer.color;
-
-        float timer = 0f;
-
-        while (timer < duration)
+        foreach (var animator in new[] { playerAnimator, playerShadowAnimator })
         {
-            timer += Time.deltaTime;
-
-            float offsetX = Random.Range(-shakeAmount, shakeAmount);
-            float offsetY = Random.Range(-shakeAmount, shakeAmount);
-            transform.position = originalPosition + new Vector3(offsetX, offsetY, 0);
-
-            spriteRenderer.color = Color.red;
-
-            yield return null;
+            animator.SetBool("IsWalking", isWalking);
+            animator.SetFloat("InputX", x);
+            animator.SetFloat("InputY", y);
+            animator.SetFloat("LastInputX", lastX);
+            animator.SetFloat("LastInputY", lastY);
         }
-
-        transform.position = originalPosition;
-        spriteRenderer.color = originalColor;
     }
 }

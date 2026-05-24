@@ -12,8 +12,15 @@ public class UpgradeButtonData : MonoBehaviour
     {
         this.upgradeDataSO = upgradeDataSO;
         
-        buttonText.text = this.upgradeDataSO.upgradeTitle;
-        buttonSprite.sprite = this.upgradeDataSO.weaponDataSO.icon;
+        if (upgradeDataSO == null)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
+        gameObject.SetActive(true);
+        buttonText.text = upgradeDataSO.upgradeTitle;
+        buttonSprite.sprite = upgradeDataSO.weaponDataSO.icon;
     }
 
     public UpgradeDataSO GetUpgradeDataSO()

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +14,12 @@ public class UpgradeSystem : MonoBehaviour
 
     private void Awake() 
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
         playerUpgradeList = new List<UpgradeDataSO>();
         playerUpgradeList.Add(firstWeapon);
@@ -43,7 +48,7 @@ public class UpgradeSystem : MonoBehaviour
                     return;
                 }
 
-                if (currentUpgrade.level == 0)
+                if (currentUpgrade.upgradeLevel == 0)
                 {
                     weaponManager.AddWeapon(currentUpgrade.weaponDataSO.prefab.GetComponent<Weapon>());                    
                 }
@@ -58,6 +63,12 @@ public class UpgradeSystem : MonoBehaviour
 
     public List<UpgradeDataSO> GetPlayerUpgradeList()
     {
-        return playerUpgradeList;
+        return new List<UpgradeDataSO>(playerUpgradeList);
+    }
+
+    private void OnDestroy()
+    {
+        if (ExperienceSystem.Instance != null)
+            ExperienceSystem.Instance.OnLevelUp -= SetupUpgradeButtons;
     }
 }

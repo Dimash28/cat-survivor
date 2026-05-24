@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 272946274}
   - component: {fileID: 272946273}
   m_Layer: 0
-  m_Name: pipo-nekonin008-shadows_1
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,11 +458,11 @@ Transform:
   m_GameObject: {fileID: 272946271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.155, z: 0}
+  m_LocalPosition: {x: -0.015, y: -0.155, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 814230311}
+  m_Father: {fileID: 577712794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &272946273
 Animator:
@@ -531,7 +531,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 288917941
+  m_SortingLayerID: 154431805
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -1356,6 +1356,7 @@ GameObject:
   - component: {fileID: 577712793}
   - component: {fileID: 577712799}
   - component: {fileID: 577712800}
+  - component: {fileID: 577712801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1389,7 +1390,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 814230311}
+  - {fileID: 1975438765}
+  - {fileID: 272946272}
   - {fileID: 1737136649}
   - {fileID: 482781816}
   m_Father: {fileID: 0}
@@ -1500,6 +1502,20 @@ MonoBehaviour:
   expLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &577712801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577712792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c80ae534908664fbd11c469d5abb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHitEffect
+  spriteTransform: {fileID: 1975438765}
+  spriteRenderer: {fileID: 814230312}
 --- !u!1 &589886500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1647,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000b3774e67b5893811b7160336
+  m_ApplyToSortingLayers: 00000000b3774e67b5893811b71603363d713409
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1972,9 +1988,8 @@ GameObject:
   - component: {fileID: 814230312}
   - component: {fileID: 814230313}
   - component: {fileID: 814230314}
-  - component: {fileID: 814230315}
   m_Layer: 0
-  m_Name: pipo-nekonin008_1
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1992,9 +2007,8 @@ Transform:
   m_LocalPosition: {x: -0.015, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 272946272}
-  m_Father: {fileID: 577712794}
+  m_Children: []
+  m_Father: {fileID: 1975438765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &814230312
 SpriteRenderer:
@@ -2042,7 +2056,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 288917941
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8109961452125243670, guid: 6efac5e11c50b7a48b13bfb6acb3f3a6, type: 3}
@@ -2090,18 +2104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
   playerShadowAnimator: {fileID: 272946273}
---- !u!114 &814230315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814230310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a81b2a6406125904289e1ef0d8fe47d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HitEffect
 --- !u!1 &918812070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2595,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47c1ff4bf54243a4298c2e73205dda80, type: 2}
   - {fileID: 11400000, guid: 4383308661128c64c87d33888b945544, type: 2}
   - {fileID: 11400000, guid: 7156deb208c2d044bb09f25fb376d5ef, type: 2}
+  - {fileID: 11400000, guid: 02d31a9d15764ad4a8998079d4f89126, type: 2}
+  - {fileID: 11400000, guid: c90f6c09a9a3d414ca723c057f36c08c, type: 2}
+  - {fileID: 11400000, guid: 20bda13e3ee1b1f44af876078326370a, type: 2}
+  - {fileID: 11400000, guid: 485ecb951d9059541ac911fe8035be2f, type: 2}
   upgradeButtonDataList:
   - {fileID: 1267408385}
   - {fileID: 1429908162}
@@ -4169,6 +4175,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816578352}
   m_CullTransparentMesh: 1
+--- !u!1 &1975438764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975438765}
+  m_Layer: 0
+  m_Name: SpriteTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975438765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975438764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 814230311}
+  m_Father: {fileID: 577712794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995408210
 GameObject:
   m_ObjectHideFlags: 0

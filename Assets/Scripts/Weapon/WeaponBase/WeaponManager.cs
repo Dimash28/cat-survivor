@@ -30,8 +30,6 @@ public class WeaponManager : MonoBehaviour
         newWeapon.transform.localPosition = Vector3.zero;
 
         activeWeaponList.Add(newWeapon);
-
-        Debug.Log($"Weapon added: {newWeapon.name}");
     }
 
     public void RemoveWeapon(Weapon weapon)

@@ -16,7 +16,8 @@ public class WeaponDataSO : ScriptableObject
     [SerializeField] public float projectileSpeed;
     [Range(1, 50)] [SerializeField] public int projectileCount = 1;
     [Range(1, 5)] [SerializeField] public int pierce = 1;
+    [Range(1f, 1.5f)] [SerializeField] public float projectileScale = 1f;
 
     [Header("Aura Type")] 
-    [Range(0.1f, 50f)] [SerializeField] public float auraRadius = 3f;                  
+    [Range(0.1f, 50f)] [SerializeField] public float auraRadius = 1f;                  
 }

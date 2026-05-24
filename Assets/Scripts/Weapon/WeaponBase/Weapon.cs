@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,8 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected WeaponDataSO weaponDataSO;
     protected WeaponDataSO runtimeDataSO;
     protected float timer;
+
+    public event Action OnUpgradeApplied;
 
     protected virtual void Awake()
     {
@@ -61,8 +64,18 @@ public abstract class Weapon : MonoBehaviour
                 case UpgradeType.Pierce:
                     runtimeDataSO.pierce += (int)effect.value;
                     break;
+                case UpgradeType.ProjectileScale:
+                    runtimeDataSO.projectileScale += effect.value;
+                    break;
+                case UpgradeType.AuraRadius:
+                    Debug.Log("Weapon.cs: RuntimeDataSO.AuraRadius = "  + runtimeDataSO.auraRadius);
+                    runtimeDataSO.auraRadius += effect.value;
+                    Debug.Log("Weapon.cs: RuntimeDataSO.AuraRadius = "  + runtimeDataSO.auraRadius);
+                    break;
             }
         }
+
+        OnUpgradeApplied?.Invoke();
     }
 
     public Sprite GetWeaponSprite()

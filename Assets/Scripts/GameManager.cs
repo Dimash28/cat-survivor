@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,7 +12,6 @@ public class GameManager : MonoBehaviour
     private float gameStartingTimer = 3f;
     private float gamePlayingTimer;
     private bool isPaused;
-    private bool isGameOver;
     private GameState state;
 
     private void Awake()
@@ -27,19 +25,25 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         gamePlayingTimer = maxGameTimeInMinutes * 60f;
+
+        state = GameState.GameStarting;
+        Time.timeScale = 0;
     }
 
     private void Start()
     {
-        GameInput.Instance.OnEscapePerformed += PerformPause;
+        if (GameInput.Instance != null)
+            GameInput.Instance.OnEscapePerformed += PerformPause;
+    
+        if (Player.Instance?.GetHealthSystem() != null)
+            Player.Instance.GetHealthSystem().OnDeath += GameOver;
     }
 
     public enum GameState
     {
         GameStarting,
         GamePlaying,
-        GameOver,
-        Pause
+        GameOver
     }
 
     private void Update()
@@ -47,9 +51,6 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case GameState.GameStarting:
-                isGameOver = false;
-                Time.timeScale = 0;
-
                 gameStartingTimer -= Time.unscaledDeltaTime;
                 if(gameStartingTimer <= 0f)
                 {
@@ -60,25 +61,12 @@ public class GameManager : MonoBehaviour
 
             case GameState.GamePlaying:
                 gamePlayingTimer -= Time.deltaTime;
-                if(gamePlayingTimer <= 0f || Player.Instance.GetHealthSystem().IsDead)
+                if(gamePlayingTimer <= 0f)
                 {
-                    state = GameState.GameOver;
+                    GameOver();
                 }
                 break;
-
-            case GameState.GameOver:
-                isGameOver = true;
-                SetOnPause();
-
-                OnGameOver?.Invoke();
-                break;
         }
-    }
-
-    private void PerformPause(object sender, System.EventArgs e)
-    {
-        if (!isPaused) SetOnPause();
-        else SetUnpause();
     }
 
     public void Restart()
@@ -99,11 +87,6 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
     }
-
-    public bool IsGameOver()
-    {
-        return isGameOver;
-    }
     
     public float GetGamePlayingTime()
     {
@@ -113,5 +96,31 @@ public class GameManager : MonoBehaviour
     public int GetMaxGameTimeInMinutes()
     {
         return maxGameTimeInMinutes;
+    }
+
+    private void PerformPause(object sender, System.EventArgs e)
+    {
+        if (state != GameState.GamePlaying) return;
+
+        if (!isPaused) SetOnPause();
+        else SetUnpause();
+    }
+
+    private void GameOver()
+    {
+        if (state == GameState.GameOver) return;
+
+        state = GameState.GameOver;
+        SetOnPause();
+        OnGameOver?.Invoke();
+    }
+
+    private void OnDestroy() 
+    {
+        if (GameInput.Instance != null)
+            GameInput.Instance.OnEscapePerformed -= PerformPause;
+
+        if (Player.Instance != null)
+            Player.Instance.GetHealthSystem().OnDeath -= GameOver;
     }
 }

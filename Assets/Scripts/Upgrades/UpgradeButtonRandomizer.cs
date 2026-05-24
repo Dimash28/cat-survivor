@@ -22,29 +22,21 @@ public class UpgradeButtonRandomizer : MonoBehaviour
         List<UpgradeDataSO> playerUpgradeList = UpgradeSystem.Instance.GetPlayerUpgradeList();
         List<UpgradeDataSO> availableUpgrades = GetAvailableUpgrades(playerUpgradeList);
 
-        if (availableUpgrades.Count == 0)
-        {
-            foreach (var button in upgradeButtonDataList)
-                button?.SetUpgradeDataSO(null);
-            return;
-        }
-
         ShuffleUpgradeDataSOList(availableUpgrades);
 
-        int index = 0;
-
-        foreach (UpgradeButtonData button in upgradeButtonDataList)
+        for (int i = 0; i < upgradeButtonDataList.Count; i++)
         {
-            if (button == null) continue;
+            if (upgradeButtonDataList[i] == null) continue;
 
-            if (index >= availableUpgrades.Count)
+            if (i < availableUpgrades.Count)
             {
-                ShuffleUpgradeDataSOList(availableUpgrades);
-                index = 0;
+                upgradeButtonDataList[i].gameObject.SetActive(true);
+                upgradeButtonDataList[i].SetUpgradeDataSO(availableUpgrades[i]);
             }
-
-            button.SetUpgradeDataSO(availableUpgrades[index]);
-            index++;
+            else
+            {
+                upgradeButtonDataList[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -63,7 +55,7 @@ public class UpgradeButtonRandomizer : MonoBehaviour
 
     private bool IsUpgradeAvailable(UpgradeDataSO upgradeDataSO, List<UpgradeDataSO> playerUpgradeList)
     {
-        if (upgradeDataSO.level == 0)
+        if (upgradeDataSO.upgradeLevel == 0)
             return !playerUpgradeList.Any(o => o.baseUpgradeDataSO == upgradeDataSO || o == upgradeDataSO);
 
         UpgradeDataSO previous = upgradeDataSO.previousUpgradeDataSO;
@@ -76,7 +68,7 @@ public class UpgradeButtonRandomizer : MonoBehaviour
 
         return !playerUpgradeList.Any(o => 
             o.baseUpgradeDataSO == upgradeDataSO.baseUpgradeDataSO && 
-            o.level >= upgradeDataSO.level);
+            o.upgradeLevel >= upgradeDataSO.upgradeLevel);
     }
 
     private void ShuffleUpgradeDataSOList(List<UpgradeDataSO> list)
@@ -90,5 +82,11 @@ public class UpgradeButtonRandomizer : MonoBehaviour
             int k = Random.Range(0, n + 1);
             (list[k], list[n]) = (list[n], list[k]);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (ExperienceSystem.Instance != null)
+            ExperienceSystem.Instance.OnLevelUp -= RandomizeUpgradeButtons;
     }
 }

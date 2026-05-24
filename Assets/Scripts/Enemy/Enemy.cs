@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Pool;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,24 +15,24 @@ public class Enemy : MonoBehaviour
     private EnemyDataSO runtimeDataSO;
     private HitEffect hitEffect;
     private bool isDying = false;
+    private ObjectPool<Enemy> pool;
+
+    private float damageCooldown = 0.5f;
+    private float lastDamageTime;
 
     protected virtual void Awake()
     {
         healthSystem = GetComponent<HealthSystem>();
         
         if (healthSystem == null)
-        {
             Debug.LogError($"Health component is missing on {gameObject.name}!");
-        }
 
         if (enemyDataSO != null)
-        {
             runtimeDataSO = Instantiate(enemyDataSO);
-        }
         else
-        {
             Debug.LogError($"EnemyDataSO is not assigned on {gameObject.name}");
-        }
+
+        if (healthSystem == null || runtimeDataSO == null) return;
 
         healthSystem.SetMaxHealth(runtimeDataSO.MaxHealth);
     }
@@ -42,14 +42,15 @@ public class Enemy : MonoBehaviour
         hitEffect = GetComponent<HitEffect>();
     }
 
-    protected virtual void Update()
-    {
-        if (healthSystem.IsDead) 
-            return;
-    }
-
     protected virtual void OnEnable()
     {
+        Debug.Log($"{gameObject.name} OnEnable, healthSystem: {healthSystem != null}");
+
+        isDying = false;
+
+        if (healthSystem != null && runtimeDataSO != null)
+            healthSystem.SetMaxHealth(runtimeDataSO.MaxHealth);
+
         if (healthSystem != null)
         {
             healthSystem.OnDamageTaken += OnDamageTaken;
@@ -85,40 +86,37 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
 
-        Destroy(gameObject);
+        if (pool != null)
+            pool.Release(this);
+        else
+            Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
+        if (Time.time - lastDamageTime < damageCooldown) return;
+    
         if (collision.gameObject.TryGetComponent<Player>(out Player player))
         {
             player.TakeDamage(runtimeDataSO.Damage);
+            lastDamageTime = Time.time;
         }
+    }
+
+    public void SetPool(ObjectPool<Enemy> pool)
+    {
+        this.pool = pool;
     }
     
     public virtual void TakeDamage(float damage)
     {
-        Debug.Log("EnemyTookDamage");
-
         if (healthSystem != null)
-        {
-            Debug.Log("Enemy is not null");
             healthSystem.TakeDamage(damage);
-        }
     }
 
-    public HealthSystem GetHealthSystem()
-    {
-        return healthSystem;
-    }
+    public HealthSystem GetHealthSystem() => healthSystem;
 
-    public List<int> GetTimeToSpawn()
-    {
-        return timeToSpawnList;
-    }
+    public List<int> GetTimeToSpawn() => new List<int>(timeToSpawnList);
 
-    public EnemyDataSO GetRuntimeDataSO()
-    {
-        return runtimeDataSO;
-    }
+    public EnemyDataSO GetRuntimeDataSO() => runtimeDataSO;
 }

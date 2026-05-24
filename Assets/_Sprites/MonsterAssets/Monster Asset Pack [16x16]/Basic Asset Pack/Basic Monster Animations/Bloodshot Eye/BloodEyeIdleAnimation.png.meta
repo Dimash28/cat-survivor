@@ -1,0 +1,953 @@
+fileFormatVersion: 2
+guid: 309dfa77c811e8644bd941b3e1aa2dd6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1819420086528535094
+    second: BloodEyeIdleAnimation 1_0
+  - first:
+      213: -7924859521885481103
+    second: BloodEyeIdleAnimation 1_1
+  - first:
+      213: 8249151715930647466
+    second: BloodEyeIdleAnimation 1_2
+  - first:
+      213: -5912934748807159702
+    second: BloodEyeIdleAnimation 1_3
+  - first:
+      213: -2291773426501070437
+    second: BloodEyeIdleAnimation 1_4
+  - first:
+      213: -2965400456095622382
+    second: BloodEyeIdleAnimation 1_5
+  - first:
+      213: 8921794538319489129
+    second: BloodEyeIdleAnimation 1_6
+  - first:
+      213: 6201049984951393499
+    second: BloodEyeIdleAnimation 1_7
+  - first:
+      213: 3815187115401022382
+    second: BloodEyeIdleAnimation 1_8
+  - first:
+      213: 2740294314858638321
+    second: BloodEyeIdleAnimation 1_9
+  - first:
+      213: 3400145003928338696
+    second: BloodEyeIdleAnimation 1_10
+  - first:
+      213: -7074224227483542697
+    second: BloodEyeIdleAnimation 1_11
+  - first:
+      213: 7229690918213498918
+    second: BloodEyeIdleAnimation 1_12
+  - first:
+      213: -7466673172050390253
+    second: BloodEyeIdleAnimation 1_13
+  - first:
+      213: 1215821372404036512
+    second: BloodEyeIdleAnimation 1_14
+  - first:
+      213: 6077464628112307666
+    second: BloodEyeIdleAnimation 1_15
+  - first:
+      213: -6394243859351054741
+    second: BloodEyeIdleAnimation 1_16
+  - first:
+      213: 6828726813212613683
+    second: BloodEyeIdleAnimation 1_17
+  - first:
+      213: -7583404053370544330
+    second: BloodEyeIdleAnimation 1_18
+  - first:
+      213: -6887592121575400900
+    second: BloodEyeIdleAnimation 1_19
+  - first:
+      213: 4715889683820592104
+    second: BloodEyeIdleAnimation 1_20
+  - first:
+      213: -7800726661106601198
+    second: BloodEyeIdleAnimation 1_21
+  - first:
+      213: 5056910788846927911
+    second: BloodEyeIdleAnimation 1_22
+  - first:
+      213: -1813604003431328269
+    second: BloodEyeIdleAnimation 1_23
+  - first:
+      213: 4133001057681865216
+    second: BloodEyeIdleAnimation 1_24
+  - first:
+      213: 1424243043860327146
+    second: BloodEyeIdleAnimation 1_25
+  - first:
+      213: -2097591827104192089
+    second: BloodEyeIdleAnimation 1_26
+  - first:
+      213: -472386196577403772
+    second: BloodEyeIdleAnimation 1_27
+  - first:
+      213: -2909684323030788183
+    second: BloodEyeIdleAnimation 1_28
+  - first:
+      213: 6198092626778615056
+    second: BloodEyeIdleAnimation 1_29
+  - first:
+      213: 6475806638610393839
+    second: BloodEyeIdleAnimation 1_30
+  - first:
+      213: 247084674482599721
+    second: BloodEyeIdleAnimation 1_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_0_Right
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbce95cef2e8e654681466fdb45c22be
+      internalID: 1098252117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_1_Right
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297385a732b862d4b8d0bb0e37b7b82e
+      internalID: 1268493269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_2_Right
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6d38132e42c7247a615e91a0df5294
+      internalID: 2139500448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_3_Right
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219a6ece870b7234586ff5f1d9e49d3a
+      internalID: -922044354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_4_Right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d174cde14c4b3a7429a6665462ae35aa
+      internalID: -1212641751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_5_Right
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce04a3e61586e394b85065b1e83b9538
+      internalID: -1303795884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_6_Right
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4c07d6e2b48764f8eb4b43079345b2
+      internalID: 115971183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_7_Right
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc7258352dff9c4fbd7a2074952a3a5
+      internalID: 592116445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_8_Right
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0fedd92399c1945ae5e9e21967d857
+      internalID: -823426038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_9_Right
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ca3b95399db2341818b1d1d8d0414f
+      internalID: 525457463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_10_Right
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cf3593285feed44b43727fc352b2dd
+      internalID: 2089566880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_11_Right
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08801a13c77e3bb45951e8cb5778393f
+      internalID: -1879808144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_12_Right
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3055c65001f0064bb737bcb1295ea32
+      internalID: 96683401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_13_Right
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c0438245ecba34197c8d3c6ea86ba8
+      internalID: 795415352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_14_Right
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a076cd2c2a049e54f92ef08f7c6e6fee
+      internalID: -199124876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_15_Right
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36f2ab28b91a114fb3516d55a680a6d
+      internalID: -506500523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_16_Left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffd68180841cad46a7bd1ac2cc97dc4
+      internalID: 934777259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_17_Left
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac9525a15a9f3d4e9b6648e9a13cb64
+      internalID: -1955009371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_18_Left
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85979a546cacb56429616fb4e892e76f
+      internalID: 1815474730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_19_Left
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d15c7135399e274f8cf13026fee97c8
+      internalID: -791438397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_20_Left
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c480e93e25c669447832f8d8aa42546c
+      internalID: 1042505943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_21_Left
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317429d3cc3024b4cb3cae7b1a8a6ef5
+      internalID: -1486141882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_22_Left
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18739b3075173384abf977c4efbf9fe1
+      internalID: -448107530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_23_Left
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708b6c8540d3f1b4c812c8ae5dfbb1dd
+      internalID: -1729854586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_24_Left
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a753c350d1b999f499cfd85b8845f895
+      internalID: 1269557946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_25_Left
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1328adb1a642e44bd95e022375cc35
+      internalID: 1939578923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_26_Left
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaa29b997933aa4da5bb26ed3ce8862
+      internalID: 680036279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_27_Left
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c8ea062dfa7e48833cae4d4b13a92
+      internalID: -407603189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_28_Left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66234e4b188ccb349a6f6fc936b65942
+      internalID: -970517215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_29_Left
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996593af437def54eb69c9f708b244fa
+      internalID: 1617158055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_30_Left
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ad054f6ed37bd459c888edfcf8c895
+      internalID: 1395286611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodEyeIdleAnimation_31_Left
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c95ca6eb30e734b8106d39329f1743
+      internalID: 288364434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9dbf15a7ca17e6b49b1913ecb8696396
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BloodEyeIdleAnimation_0_Right: 1098252117
+      BloodEyeIdleAnimation_10_Right: 2089566880
+      BloodEyeIdleAnimation_11_Right: -1879808144
+      BloodEyeIdleAnimation_12_Right: 96683401
+      BloodEyeIdleAnimation_13_Right: 795415352
+      BloodEyeIdleAnimation_14_Right: -199124876
+      BloodEyeIdleAnimation_15_Right: -506500523
+      BloodEyeIdleAnimation_16_Left: 934777259
+      BloodEyeIdleAnimation_17_Left: -1955009371
+      BloodEyeIdleAnimation_18_Left: 1815474730
+      BloodEyeIdleAnimation_19_Left: -791438397
+      BloodEyeIdleAnimation_1_Right: 1268493269
+      BloodEyeIdleAnimation_20_Left: 1042505943
+      BloodEyeIdleAnimation_21_Left: -1486141882
+      BloodEyeIdleAnimation_22_Left: -448107530
+      BloodEyeIdleAnimation_23_Left: -1729854586
+      BloodEyeIdleAnimation_24_Left: 1269557946
+      BloodEyeIdleAnimation_25_Left: 1939578923
+      BloodEyeIdleAnimation_26_Left: 680036279
+      BloodEyeIdleAnimation_27_Left: -407603189
+      BloodEyeIdleAnimation_28_Left: -970517215
+      BloodEyeIdleAnimation_29_Left: 1617158055
+      BloodEyeIdleAnimation_2_Right: 2139500448
+      BloodEyeIdleAnimation_30_Left: 1395286611
+      BloodEyeIdleAnimation_31_Left: 288364434
+      BloodEyeIdleAnimation_3_Right: -922044354
+      BloodEyeIdleAnimation_4_Right: -1212641751
+      BloodEyeIdleAnimation_5_Right: -1303795884
+      BloodEyeIdleAnimation_6_Right: 115971183
+      BloodEyeIdleAnimation_7_Right: 592116445
+      BloodEyeIdleAnimation_8_Right: -823426038
+      BloodEyeIdleAnimation_9_Right: 525457463
+      _Left: 1269557946
+      _LeftBloodEyeIdleAnimation_29: 1617158055
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

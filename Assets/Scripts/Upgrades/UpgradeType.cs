@@ -6,6 +6,8 @@ public enum UpgradeType
     Cooldown,
     ProjectileCount,
     ProjectileSpeed,
+    ProjectileScale,
+    AuraRadius,
     Pierce,
     MoveSpeed,
     Health

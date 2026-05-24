@@ -1,25 +1,36 @@
-using System.Net.Cache;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance {get; private set;}
 
-    private HitEffect hitEffect;
+    private PlayerHitEffect playerHitEffect;
     private HealthSystem healthSystem;
     
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
+        Instance = this;
         healthSystem = GetComponent<HealthSystem>();
+
+        if (healthSystem == null)
+        {
+            Debug.LogError("HealthSystem не найден на Player!");
+            return;
+        }
+
         healthSystem.OnDamageTaken += OnDamageTaken;
     }
     
     private void Start() 
     {
-        hitEffect = GetComponentInChildren<HitEffect>();
+        playerHitEffect = GetComponentInChildren<PlayerHitEffect>();
     }
 
     public Vector3 GetPlayerPosition()
@@ -34,26 +45,22 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (healthSystem != null)
-        {
-            healthSystem.TakeDamage(damage);
-        }
+        healthSystem.TakeDamage(damage);
     }
 
     public void Heal(float healAmount)
     {
-        if (healthSystem != null)
-        {
-            healthSystem.Heal(healAmount);
-        }
-        else
-        {
-            Debug.LogError("HealthSystem is NULL in Player!");
-        }
+        healthSystem.Heal(healAmount);
     }
 
     private void OnDamageTaken()
     {
-        hitEffect.PlayHitEffect();
+        playerHitEffect.PlayHitEffect();
+    }
+
+    private void OnDestroy()
+    {
+        if (healthSystem != null)
+            healthSystem.OnDamageTaken -= OnDamageTaken;
     }
 }

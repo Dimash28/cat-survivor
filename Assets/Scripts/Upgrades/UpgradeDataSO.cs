@@ -7,7 +7,7 @@ public class UpgradeDataSO : ScriptableObject
     public string upgradeTitle;
     public WeaponDataSO weaponDataSO;
 
-    public int level;
+    public int upgradeLevel;
     public UpgradeDataSO previousUpgradeDataSO;
     public UpgradeDataSO baseUpgradeDataSO;
 

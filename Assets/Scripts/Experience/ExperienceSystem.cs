@@ -33,7 +33,6 @@ public class ExperienceSystem : MonoBehaviour
     {
         currentExperienceAmount += expAmount;
         OnExpGained?.Invoke();
-        Debug.Log($"Current Experience Amount: {currentExperienceAmount} out of {currentExpAmountToNextLevel}");
 
         if (currentExperienceAmount >= currentExpAmountToNextLevel)
         {
@@ -43,8 +42,6 @@ public class ExperienceSystem : MonoBehaviour
             currentExpAmountToNextLevel *= expAmountToNextLevelIncrement;
             currentExperienceAmount = 0;
             OnCurrentExpAmountReset?.Invoke();
-
-            Debug.Log("Current Level: " + level);
         }
     }
 

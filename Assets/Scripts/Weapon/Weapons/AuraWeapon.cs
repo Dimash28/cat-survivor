@@ -4,34 +4,23 @@ using UnityEngine;
 
 public class AuraWeapon : Weapon
 {
-    private GameObject auraVisual;
     private Animator auraAnimator;
-    private new CircleCollider2D collider2D;
-    private float currentDamage;
 
     private List<Enemy> enemyInRangeList;
 
     protected override void Awake()
     {
         base.Awake();
-        CreateAuraVisual();
 
         enemyInRangeList = new List<Enemy>();
+        auraAnimator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        currentDamage = runtimeDataSO.damage;
-        collider2D = GetComponent<CircleCollider2D>();
-    }
+        transform.localScale = new Vector3(runtimeDataSO.auraRadius, runtimeDataSO.auraRadius, transform.localScale.z);
 
-    private void CreateAuraVisual()
-    {
-        if (runtimeDataSO.prefab != null)
-        {
-            auraVisual = Instantiate(runtimeDataSO.prefab, transform);
-            auraAnimator = auraVisual.GetComponentInChildren<Animator>();
-        }
+        OnUpgradeApplied += Weapon_OnUpgradeApplied;
     }
 
     protected override void Update()
@@ -45,10 +34,21 @@ public class AuraWeapon : Weapon
         {
             if(enemy != null)
             {
-                enemy.TakeDamage(currentDamage);
+                enemy.TakeDamage(runtimeDataSO.damage);
                 auraAnimator.Play("AuraAttack");
             }
         }
+    }
+
+    private void Weapon_OnUpgradeApplied()
+    {
+        Debug.Log("Transform.LocalScale = " + transform.localScale);
+        transform.localScale = new Vector3(
+            runtimeDataSO.auraRadius, 
+            runtimeDataSO.auraRadius, 
+            transform.localScale.z);
+        Debug.Log("Transform.LocalScale = " + transform.localScale);
+        Debug.Log("AuraWeapon.cs: RuntimeDataSO.AuraRadius = "  + runtimeDataSO.auraRadius);
     }
 
     private void OnTriggerStay2D(Collider2D other)

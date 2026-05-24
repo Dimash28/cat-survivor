@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 
 [System.Serializable]
-public class UpgradeEffect : MonoBehaviour
+public class UpgradeEffect
 {
     public UpgradeType type;
     public float value;

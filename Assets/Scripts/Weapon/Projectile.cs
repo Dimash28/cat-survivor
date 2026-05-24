@@ -64,10 +64,8 @@ public class Projectile : MonoBehaviour
 
     private void ReducePierce()
     {
-        Debug.Log("ReducePierce()");
-        Debug.Log("CurrentPierce = " + currentPierce);
         currentPierce--;
-        Debug.Log("CurrentPierce = " + currentPierce);
+
         if (currentPierce <= 0)
         {
             Destroy(gameObject);
@@ -76,15 +74,11 @@ public class Projectile : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if(!other.CompareTag("Player"))
-            Debug.Log(other + " collider triggered");
-
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Tag Enemy");
             Enemy enemy = other.GetComponent<Enemy>();
             enemy.TakeDamage(currentDamage);
-            Debug.Log("ProjectileOnTriggerEnter2D");
+
             ReducePierce();
         }
     }

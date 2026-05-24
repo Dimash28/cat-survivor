@@ -12,14 +12,13 @@ public class HealthSystem : MonoBehaviour
     public event System.Action OnDamageTaken;
     public event System.Action OnHeal;
 
-    private void Start()
+    private void Awake()
     {
         CurrentHealth = maxHealth;
     }
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("HealthSystem.TakeDamage() Performed");
         if (IsDead) return;
 
         CurrentHealth -= damage;
@@ -29,8 +28,6 @@ public class HealthSystem : MonoBehaviour
         {
             OnDeath?.Invoke();
         }
-
-        Debug.Log(CurrentHealth);
     }
 
     public float GetCurrentHealth()
@@ -46,6 +43,7 @@ public class HealthSystem : MonoBehaviour
     public void SetMaxHealth(float maxHealth)
     {
         this.maxHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void Heal(float healAmount)

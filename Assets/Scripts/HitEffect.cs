@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class HitEffect : MonoBehaviour
@@ -13,7 +12,7 @@ public class HitEffect : MonoBehaviour
     }
     public void PlayHitEffect()
     {
-        originalPosition = transform.localPosition;
+        originalPosition = transform.position;
         StartCoroutine(HitEffectCoroutine());
     }
 
@@ -40,5 +39,12 @@ public class HitEffect : MonoBehaviour
 
         transform.position = originalPosition;
         spriteRenderer.color = originalColor;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        spriteRenderer.color = Color.white;
+        transform.localPosition = Vector3.zero;
     }
 }
