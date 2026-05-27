@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Stats")]
     [SerializeField] private EnemyDataSO enemyDataSO;
     [SerializeField] private Transform spriteTransform;
-    [SerializeField] private List<int> timeToSpawnList;
+    [SerializeField] private SoundSO deathSound;
+    [SerializeField] private SoundSO damageSound;
 
     private HealthSystem healthSystem;
     private EnemyDataSO runtimeDataSO;
@@ -41,6 +42,32 @@ public class Enemy : MonoBehaviour
         hitEffect = GetComponent<HitEffect>();
     }
 
+    protected virtual void Update()
+    {
+        if (healthSystem.IsDead) return;
+
+        int elapsed = Mathf.FloorToInt(
+            (GameManager.Instance.GetMaxGameTimeInMinutes() * 60f
+            - GameManager.Instance.GetGamePlayingTime()) / 60f
+        );
+
+        bool shouldBeAlive = enemyDataSO.SpawnTimeRanges.Exists(range =>
+            elapsed >= range.from && elapsed <= range.to
+        );
+
+        if (!shouldBeAlive)
+        {
+            float distance = Vector2.Distance(transform.position, Player.Instance.GetPlayerPosition());
+            if (distance > 15f)
+            {
+                if (pool != null)
+                    pool.Release(this);
+                else
+                    Destroy(gameObject);
+            }
+        }
+    }
+
     protected virtual void OnEnable()
     {
         Debug.Log($"{gameObject.name} OnEnable, healthSystem: {healthSystem != null}");
@@ -70,7 +97,8 @@ public class Enemy : MonoBehaviour
     {
         if (isDying) return;
 
-        hitEffect.PlayHitEffect();
+        AudioManager.Instance.Play(damageSound);
+        hitEffect.PlayHitEffect();        
     }
 
     protected virtual void OnDeath()
@@ -89,6 +117,8 @@ public class Enemy : MonoBehaviour
             pool.Release(this);
         else
             Destroy(gameObject);
+
+        // AudioManager.Instance.Play(deathSound);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -115,7 +145,7 @@ public class Enemy : MonoBehaviour
 
     public HealthSystem GetHealthSystem() => healthSystem;
 
-    public List<int> GetTimeToSpawn() => new List<int>(timeToSpawnList);
-
     public EnemyDataSO GetRuntimeDataSO() => runtimeDataSO;
+
+    public EnemyDataSO GetEnemyDataSO() => enemyDataSO;
 }

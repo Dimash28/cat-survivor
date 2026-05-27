@@ -19,12 +19,6 @@ public class LevelUpUI : MonoBehaviour
     {
         Show();
         
-        StartCoroutine(PauseAfterDelay());
-    }
-
-    private IEnumerator PauseAfterDelay()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
         GameManager.Instance.SetOnPause();
     }
 

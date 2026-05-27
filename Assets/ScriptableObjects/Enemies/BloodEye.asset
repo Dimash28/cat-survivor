@@ -15,3 +15,8 @@ MonoBehaviour:
   moveSpeed: 1
   maxHealth: 20
   damage: 5
+  spawnTimeRanges:
+  - from: 0
+    to: 0
+  - from: 4
+    to: 5

@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     protected float currentDamage;
     protected float currentSpeed;
     protected float currentCooldown;
+    protected float currentScale;
     protected int currentPierce;
     private float timer;
     private float delayTimer;
@@ -17,6 +18,7 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        currentScale = 1f;
     }
 
     private void Start()
@@ -36,10 +38,12 @@ public class Projectile : MonoBehaviour
         currentSpeed = weaponDataSO.projectileSpeed;
         currentCooldown = weaponDataSO.cooldown;
         currentPierce = weaponDataSO.pierce;
+        currentScale = weaponDataSO.projectileScale;
 
         velocity = direction * currentSpeed;
         float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.localScale *= currentScale;
 
         timer = lifeTime;
         delayTimer = delay;

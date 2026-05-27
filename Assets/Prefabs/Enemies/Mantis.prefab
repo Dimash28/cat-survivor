@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: aa5d9a3bd5cb08e4491fcaec367bb717, type: 2}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: timeToSpawnList.Array.size
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[0]'
@@ -42,23 +42,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[2]'
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[3]'
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[4]'
-      value: 9
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[5]'
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[6]'
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: 'timeToSpawnList.Array.data[7]'

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3b0a2b4df16aa44b2be357f6eea95d, type: 3}
   m_Name: LevelUpSoundSO
   m_EditorClassIdentifier: Assembly-CSharp::SoundSO
-  clip: {fileID: 0}
-  volume: 1
-  pitch: 1
+  clip: {fileID: 8300000, guid: d359cd5bccd8a5e4fac5501888a7e454, type: 3}
+  volume: 0.6
+  volumeVariance: 0
+  pitch: 0.8
+  isPitchVariable: 0
+  pitchVariance: 0
+  hasCooldown: 0
+  cooldown: 0.1

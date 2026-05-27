@@ -43,14 +43,20 @@ public class EnemySpawner : MonoBehaviour
         if (enemyPrefabs.Count == 0) return;
 
         int elapsed = Mathf.FloorToInt(
-            (GameManager.Instance.GetMaxGameTimeInMinutes() * 60f 
-            - GameManager.Instance.GetGamePlayingTime()) / 60f
+            (GameManager.Instance.GetMaxGameTimeInMinutes() * 60f -
+            GameManager.Instance.GetGamePlayingTime()) / 60f
         );
 
-        List<Enemy> available = enemyPrefabs.FindAll(e => 
-            e.GetTimeToSpawn().Count == 0 || 
-            e.GetTimeToSpawn().Exists(t => t <= elapsed)
-        );
+        List<Enemy> available = enemyPrefabs.FindAll(e =>
+        {
+            var data = e.GetEnemyDataSO();
+            if (data == null) return false;
+            if (data.SpawnTimeRanges == null || data.SpawnTimeRanges.Count == 0) return false;
+            
+            return data.SpawnTimeRanges.Exists(range =>
+                elapsed >= range.from && elapsed <= range.to
+            );
+        });
 
         if (available.Count == 0) return;
 

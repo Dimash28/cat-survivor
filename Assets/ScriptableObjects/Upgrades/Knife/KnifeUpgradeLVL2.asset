@@ -20,5 +20,5 @@ MonoBehaviour:
   upgradeEffectList:
   - type: 3
     value: 2
-  - type: 4
+  - type: 6
     value: 1

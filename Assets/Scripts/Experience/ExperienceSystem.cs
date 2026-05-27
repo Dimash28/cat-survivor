@@ -24,7 +24,7 @@ public class ExperienceSystem : MonoBehaviour
     {
         level = 1;
         defaultExpAmountToNextLevel = 100;
-        expAmountToNextLevelIncrement = 1.1f;
+        expAmountToNextLevelIncrement = 1.3f;
 
         currentExpAmountToNextLevel = defaultExpAmountToNextLevel;
     }

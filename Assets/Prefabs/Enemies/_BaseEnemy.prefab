@@ -381,8 +381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyDataSO: {fileID: 0}
   spriteTransform: {fileID: 1603242026734810463}
-  timeToSpawnList: 
-  spriteRenderer: {fileID: 0}
+  deathSound: {fileID: 11400000, guid: d66fbd1ddb1eab44e9b38a6980f788e3, type: 2}
+  damageSound: {fileID: 11400000, guid: feda29e809cc2be408287e1ca897daaa, type: 2}
 --- !u!114 &7907852535597918412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d7f97989663f64c8c9126a4db6e195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  offset: {x: 0, y: 0.25}
 --- !u!114 &6935028643915280241
 MonoBehaviour:
   m_ObjectHideFlags: 0

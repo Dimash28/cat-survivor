@@ -64,13 +64,13 @@ public abstract class Weapon : MonoBehaviour
                 case UpgradeType.Pierce:
                     runtimeDataSO.pierce += (int)effect.value;
                     break;
+
                 case UpgradeType.ProjectileScale:
-                    runtimeDataSO.projectileScale += effect.value;
+                    runtimeDataSO.projectileScale = effect.value;
                     break;
+
                 case UpgradeType.AuraRadius:
-                    Debug.Log("Weapon.cs: RuntimeDataSO.AuraRadius = "  + runtimeDataSO.auraRadius);
                     runtimeDataSO.auraRadius += effect.value;
-                    Debug.Log("Weapon.cs: RuntimeDataSO.AuraRadius = "  + runtimeDataSO.auraRadius);
                     break;
             }
         }
