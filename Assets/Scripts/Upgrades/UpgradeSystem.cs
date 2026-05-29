@@ -41,21 +41,33 @@ public class UpgradeSystem : MonoBehaviour
             upgradeButton.onClick.AddListener(() =>
             {
                 UpgradeDataSO currentUpgrade = upgradeButtonData.GetUpgradeDataSO();
-                
-                if (currentUpgrade == null)
+
+                if (currentUpgrade == null) return;
+
+                if (currentUpgrade.weaponDataSO != null)
                 {
-                    Debug.LogError("UpgradeDataSO is null on button!");
-                    return;
+                    if (currentUpgrade.upgradeLevel == 0)
+                        weaponManager.AddWeapon(currentUpgrade.weaponDataSO.prefab.GetComponent<Weapon>());
+
+                    weaponManager.LevelUpWeapon(currentUpgrade);
+                }
+                else
+                {
+                    foreach (var effect in currentUpgrade.upgradeEffectList)
+                    {
+                        switch (effect.type)
+                        {
+                            case UpgradeType.MoveSpeed:
+                                PlayerStats.Instance.IncreaseMoveSpeed(effect.value);
+                                break;
+                            case UpgradeType.Health:
+                                PlayerStats.Instance.IncreaseMaxHealth(effect.value);
+                                break;
+                        }
+                    }
                 }
 
-                if (currentUpgrade.upgradeLevel == 0)
-                {
-                    weaponManager.AddWeapon(currentUpgrade.weaponDataSO.prefab.GetComponent<Weapon>());                    
-                }
-
-                weaponManager.LevelUpWeapon(currentUpgrade);
                 playerUpgradeList.Add(currentUpgrade);
-
                 levelUpUI.HideLevelUpUIAndUnpause();
             });
         }

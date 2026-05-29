@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private List<SoundSO> walkSound;
-    [SerializeField] private float speed = 2f;
     [SerializeField] private float walkSoundCooldown = 0.5f;
     private float lastWalkSoundTime;
 
@@ -16,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
+        float speed = PlayerStats.Instance.MoveSpeed;
 
         transform.position += (Vector3)inputVector * Time.deltaTime * speed; 
 

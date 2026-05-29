@@ -30,7 +30,7 @@ public abstract class Weapon : MonoBehaviour
         if (timer <= 0)
         {
             Attack();
-            timer = weaponDataSO.cooldown;
+            timer = runtimeDataSO.cooldown;
         }
     }
 

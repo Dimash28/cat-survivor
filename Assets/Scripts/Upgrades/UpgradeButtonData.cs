@@ -20,6 +20,13 @@ public class UpgradeButtonData : MonoBehaviour
 
         gameObject.SetActive(true);
         buttonText.text = upgradeDataSO.upgradeTitle;
+
+        if(upgradeDataSO.weaponDataSO == null)
+        { 
+            buttonSprite.sprite = null;
+            return;
+        }
+        
         buttonSprite.sprite = upgradeDataSO.weaponDataSO.icon;
     }
 
