@@ -32,7 +32,7 @@ public class KnifeWeapon : Weapon
 
             GameObject knife = Instantiate(
                 runtimeDataSO.prefab, 
-                transform.position + new Vector3(0, 0.3f, 0), 
+                transform.position, 
                 Quaternion.identity
             );
 

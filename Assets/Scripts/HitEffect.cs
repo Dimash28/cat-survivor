@@ -20,7 +20,6 @@ public class HitEffect : MonoBehaviour
     {
         float duration = 0.15f;
         float shakeAmount = 0.08f;
-        Color originalColor = spriteRenderer.color;
 
         float timer = 0f;
 
@@ -38,7 +37,7 @@ public class HitEffect : MonoBehaviour
         }
 
         transform.position = originalPosition;
-        spriteRenderer.color = originalColor;
+        spriteRenderer.color = Color.white;
     }
 
     private void OnDisable()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1380455054939746783}
   - component: {fileID: 9115063622511381736}
   - component: {fileID: 4422626682819717553}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 9063635021767955029}
   - component: {fileID: 3951473072314361284}
   - component: {fileID: 1368048423850029498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 8646617030031877004}
   - component: {fileID: -7271023367416233790}
   - component: {fileID: 6935028643915280241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: _BaseEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

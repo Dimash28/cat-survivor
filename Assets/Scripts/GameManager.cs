@@ -4,15 +4,27 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameState
+    {
+        GameStarting,
+        GamePlaying,
+        GameOver,
+        GameWin
+    }
+    
     public static GameManager Instance {get; private set;}
     [SerializeField] private int maxGameTimeInMinutes = 15;
 
     public Action OnGameOver;
+    public Action OnGameWin;
 
     private float gameStartingTimer = 3f;
     private float gamePlayingTimer;
     private bool isPaused;
     private GameState state;
+
+    private int totalArtifacts = 3;
+    private int collectedArtifacts = 0;
 
     private void Awake()
     {
@@ -39,13 +51,6 @@ public class GameManager : MonoBehaviour
             Player.Instance.GetHealthSystem().OnDeath += GameOver;
     }
 
-    public enum GameState
-    {
-        GameStarting,
-        GamePlaying,
-        GameOver
-    }
-
     private void Update()
     {
         switch (state)
@@ -67,6 +72,22 @@ public class GameManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void OnArtifactCollected()
+    {
+        collectedArtifacts++;
+
+        if (collectedArtifacts >= totalArtifacts)
+            GameWin();
+    }
+
+    private void GameWin()
+    {
+        if (state == GameState.GameOver || state == GameState.GameWin) return;
+        state = GameState.GameWin;
+        SetOnPause();
+        OnGameWin?.Invoke();
     }
 
     public void Restart()

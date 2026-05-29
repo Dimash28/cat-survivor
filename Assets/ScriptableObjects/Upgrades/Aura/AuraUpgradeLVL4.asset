@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af54e17bfa6588f48ad3604d7c10ce88, type: 3}
   m_Name: AuraUpgradeLVL4
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
-  upgradeTitle: Aura Upgrade 3 LVL
+  upgradeTitle: Aura Upgrade 4 LVL
   weaponDataSO: {fileID: 11400000, guid: 08655b43f3876764789d28e707462472, type: 2}
-  upgradeLevel: 3
+  upgradeLevel: 4
   previousUpgradeDataSO: {fileID: 11400000, guid: c90f6c09a9a3d414ca723c057f36c08c, type: 2}
   baseUpgradeDataSO: {fileID: 11400000, guid: 7156deb208c2d044bb09f25fb376d5ef, type: 2}
   upgradeEffectList:
   - type: 0
     value: 2
+  - type: 5
+    value: 0.5
   - type: 1
     value: 0.2

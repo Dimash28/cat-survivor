@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2385871475980599233}
   - component: {fileID: 7232282113620354221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 288917941
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2472801792072297344, guid: 1adb5c8d6614d4f47a3e837ed6613e89, type: 3}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 9095896700105582064}
   - component: {fileID: 5695996716048804495}
   - component: {fileID: 3913319793067981849}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KnifeProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

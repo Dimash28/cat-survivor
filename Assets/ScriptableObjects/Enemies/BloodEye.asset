@@ -17,6 +17,6 @@ MonoBehaviour:
   damage: 5
   spawnTimeRanges:
   - from: 0
-    to: 0
+    to: 1
   - from: 4
     to: 5
