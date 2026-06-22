@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3b0a2b4df16aa44b2be357f6eea95d, type: 3}
   m_Name: GrassWalkSoundSO_3
   m_EditorClassIdentifier: Assembly-CSharp::SoundSO
+  audioCategory: 0
   clip: {fileID: 8300000, guid: 3e4761d98a2e6ae4a962b2e0b9f376de, type: 3}
-  volume: 0.4
-  volumeVariance: -0.3
+  volume: 0.5
+  volumeVariance: -0.2
   pitch: 1
-  isPitchVariable: 1
+  isPitchVariable: 0
   pitchVariance: 0.2
   hasCooldown: 0
   cooldown: 0.1
+  maxSimultaneous: 3

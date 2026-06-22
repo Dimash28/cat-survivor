@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private SoundSO deathSound;
     [SerializeField] private SoundSO damageSound;
 
-    private HealthSystem healthSystem;
+    protected HealthSystem healthSystem;
     private EnemyDataSO runtimeDataSO;
     private HitEffect hitEffect;
     private bool isDying = false;
@@ -47,8 +47,8 @@ public class Enemy : MonoBehaviour
         if (healthSystem.IsDead) return;
 
         int elapsed = Mathf.FloorToInt(
-            (GameManager.Instance.GetMaxGameTimeInMinutes() * 60f
-            - GameManager.Instance.GetGamePlayingTime()) / 60f
+            (G.game.GetMaxGameTimeInMinutes() * 60f
+            - G.game.GetGamePlayingTime()) / 60f
         );
 
         bool shouldBeAlive = enemyDataSO.SpawnTimeRanges.Exists(range =>
@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
 
         if (!shouldBeAlive)
         {
-            float distance = Vector2.Distance(transform.position, Player.Instance.GetPlayerPosition());
+            float distance = Vector2.Distance(transform.position, G.player.GetPlayerPosition());
             if (distance > 15f)
             {
                 if (pool != null)
@@ -70,8 +70,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        Debug.Log($"{gameObject.name} OnEnable, healthSystem: {healthSystem != null}");
-
         isDying = false;
 
         if (healthSystem != null && runtimeDataSO != null)
@@ -97,8 +95,10 @@ public class Enemy : MonoBehaviour
     {
         if (isDying) return;
 
-        AudioManager.Instance.Play(damageSound);
-        hitEffect.PlayHitEffect();        
+        G.audio.Play(damageSound);
+
+        if(hitEffect != null)
+            hitEffect.PlayHitEffect();        
     }
 
     protected virtual void OnDeath()
@@ -117,8 +117,6 @@ public class Enemy : MonoBehaviour
             pool.Release(this);
         else
             Destroy(gameObject);
-
-        // AudioManager.Instance.Play(deathSound);
     }
 
     private void OnCollisionStay2D(Collision2D collision)

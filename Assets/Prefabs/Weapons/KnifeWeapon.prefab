@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnifeWeapon
   weaponDataSO: {fileID: 11400000, guid: a67a06ecd2b941641ac79078b2143fe0, type: 2}
+  knifeSoundList:
+  - {fileID: 11400000, guid: a64397cbabaa4794aa51bf8f52ce562a, type: 2}
+  - {fileID: 11400000, guid: 4ff9d9aebac226146839ba355f7a992c, type: 2}
+  - {fileID: 11400000, guid: 4db8c298910887648a698553b952767e, type: 2}

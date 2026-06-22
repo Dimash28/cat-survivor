@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: _BaseUpgrade_Sword
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Sword Weapon
+  icon: {fileID: 5719398354656993734, guid: dec05fcefb5664b42b6b9d9d4cf54871, type: 3}
   weaponDataSO: {fileID: 11400000, guid: 261af010ee2746a4cb4ad6da7f3ea597, type: 2}
   upgradeLevel: 0
   previousUpgradeDataSO: {fileID: 0}

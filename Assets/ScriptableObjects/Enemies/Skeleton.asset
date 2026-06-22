@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2a44e7a5d84484191ea71c61d078ac, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
-  moveSpeed: 1
-  maxHealth: 500
-  damage: 30
-  spawnTimeRanges: []
+  moveSpeed: 1.1
+  maxHealth: 300
+  damage: 20
+  spawnTimeRanges:
+  - from: 6
+    to: 9
+  - from: 13
+    to: 14
+  requiresUnlock: 0

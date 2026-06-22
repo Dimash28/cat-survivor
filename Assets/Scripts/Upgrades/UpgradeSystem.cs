@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,10 +7,13 @@ public class UpgradeSystem : MonoBehaviour
 {
     public static UpgradeSystem Instance {get; private set;}
 
+    public Action OnHealthUpgrade;
+
     [SerializeField] private LevelUpUI levelUpUI;
     [SerializeField] private WeaponManager weaponManager;
     [SerializeField] private List<Button> upgradeButtonList;
     [SerializeField] private UpgradeDataSO firstWeapon;
+    [SerializeField] private SoundSO upgradeAppliedSoundSO;
     private List<UpgradeDataSO> playerUpgradeList;
 
     private void Awake() 
@@ -27,7 +31,7 @@ public class UpgradeSystem : MonoBehaviour
 
     private void Start()
     {
-        ExperienceSystem.Instance.OnLevelUp += SetupUpgradeButtons;
+        G.experience.OnLevelUp += SetupUpgradeButtons;
     }
 
     private void SetupUpgradeButtons()
@@ -38,8 +42,10 @@ public class UpgradeSystem : MonoBehaviour
             
             upgradeButton.onClick.RemoveAllListeners();
             
-            upgradeButton.onClick.AddListener(() =>
+            upgradeButton.onClick.AddListener((UnityEngine.Events.UnityAction)(() =>
             {
+                G.audio.Play(upgradeAppliedSoundSO);
+
                 UpgradeDataSO currentUpgrade = upgradeButtonData.GetUpgradeDataSO();
 
                 if (currentUpgrade == null) return;
@@ -58,10 +64,11 @@ public class UpgradeSystem : MonoBehaviour
                         switch (effect.type)
                         {
                             case UpgradeType.MoveSpeed:
-                                PlayerStats.Instance.IncreaseMoveSpeed(effect.value);
+                                G.stats.IncreaseMoveSpeed(effect.value);
                                 break;
                             case UpgradeType.Health:
-                                PlayerStats.Instance.IncreaseMaxHealth(effect.value);
+                                G.stats.IncreaseMaxHealth(effect.value);
+                                OnHealthUpgrade?.Invoke();
                                 break;
                         }
                     }
@@ -69,7 +76,7 @@ public class UpgradeSystem : MonoBehaviour
 
                 playerUpgradeList.Add(currentUpgrade);
                 levelUpUI.HideLevelUpUIAndUnpause();
-            });
+            }));
         }
     }
 
@@ -80,7 +87,7 @@ public class UpgradeSystem : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (ExperienceSystem.Instance != null)
-            ExperienceSystem.Instance.OnLevelUp -= SetupUpgradeButtons;
+        if (G.experience != null)
+            G.experience.OnLevelUp -= SetupUpgradeButtons;
     }
 }

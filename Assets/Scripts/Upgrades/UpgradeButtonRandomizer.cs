@@ -14,12 +14,12 @@ public class UpgradeButtonRandomizer : MonoBehaviour
             upgradeButtonDataList = new List<UpgradeButtonData>(GetComponentsInChildren<UpgradeButtonData>());
         }
 
-        ExperienceSystem.Instance.OnLevelUp += RandomizeUpgradeButtons;
+        G.experience.OnLevelUp += RandomizeUpgradeButtons;
     }
 
     private void RandomizeUpgradeButtons()
     {
-        List<UpgradeDataSO> playerUpgradeList = UpgradeSystem.Instance.GetPlayerUpgradeList();
+        List<UpgradeDataSO> playerUpgradeList = G.upgrade.GetPlayerUpgradeList();
         List<UpgradeDataSO> availableUpgrades = GetAvailableUpgrades(playerUpgradeList);
 
         ShuffleUpgradeDataSOList(availableUpgrades);
@@ -86,7 +86,7 @@ public class UpgradeButtonRandomizer : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (ExperienceSystem.Instance != null)
-            ExperienceSystem.Instance.OnLevelUp -= RandomizeUpgradeButtons;
+        if (G.experience != null)
+            G.experience.OnLevelUp -= RandomizeUpgradeButtons;
     }
 }

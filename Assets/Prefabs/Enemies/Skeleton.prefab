@@ -8,26 +8,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8493320032211086353, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: spawnDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8493320032211086353, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: teleportDistance
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: -7271023367416233790, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.x
-      value: 0.8930664
+      value: 0.6921061
       objectReference: {fileID: 0}
     - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.y
-      value: 1.7251799
+      value: 1.3476181
       objectReference: {fileID: 0}
     - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Offset.x
-      value: -0.01251483
+      value: -0.033828795
       objectReference: {fileID: 0}
     - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Offset.y
-      value: 0.7883922
+      value: 0.6605083
       objectReference: {fileID: 0}
+    - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 11400000, guid: adb3965f2ea6d614cb5ea05473414444, type: 2}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: enemyDataSO
       value: 
-      objectReference: {fileID: 11400000, guid: 9d88e48588a62f445b4469900d5dc20e, type: 2}
+      objectReference: {fileID: 11400000, guid: ae1e3e1c390f8d142a65fe4b87157a80, type: 2}
     - target: {fileID: 1380455054939746783, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.x
       value: 4.6875
@@ -108,6 +124,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8646617030031877004, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: expPrefab
+      value: 
+      objectReference: {fileID: 2266319183951566191, guid: d52d5695a29e42d44ba980f71f0e7ff8, type: 3}
     - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.x
       value: 4.6875
@@ -128,39 +148,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 481a82b4787b6424598714230cbe44e9, type: 2}
-    m_RemovedComponents:
-    - {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5244576505117888058, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 3796709623702682533}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
---- !u!4 &1258629791489184128 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1603242026734810463, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
-  m_PrefabInstance: {fileID: 524758423438271711}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5728626598207810277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5244576505117888058, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
-  m_PrefabInstance: {fileID: 524758423438271711}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3796709623702682533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5728626598207810277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a9405c6838678c47adc1c83b73cd858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniBoss
-  enemyDataSO: {fileID: 11400000, guid: 9d88e48588a62f445b4469900d5dc20e, type: 2}
-  spriteTransform: {fileID: 1258629791489184128}
-  deathSound: {fileID: 11400000, guid: d66fbd1ddb1eab44e9b38a6980f788e3, type: 2}
-  damageSound: {fileID: 11400000, guid: feda29e809cc2be408287e1ca897daaa, type: 2}
-  guardedArtifact: {fileID: 6093146754748828521, guid: d6b7a4281e68a05408134a299230a6e2, type: 3}

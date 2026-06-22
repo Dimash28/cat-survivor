@@ -12,11 +12,24 @@ public class GameInput : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
 
         playerInputSystem = new PlayerInputSystem();
         playerInputSystem.Player.Enable();
         playerInputSystem.Player.Escape.performed += Escape_Performed;
+    }
+
+    private void OnDestroy()
+    {
+        playerInputSystem.Player.Escape.performed -= Escape_Performed;
+        playerInputSystem.Player.Disable();
+        playerInputSystem.Dispose();
     }
 
     public Vector2 GetInputVectorNormalized()
@@ -26,7 +39,7 @@ public class GameInput : MonoBehaviour
         return inputVector.normalized;
     }
 
-    public void Escape_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    public void Escape_Performed(InputAction.CallbackContext obj)
     {
         OnEscapePerformed?.Invoke(this, EventArgs.Empty);
     }

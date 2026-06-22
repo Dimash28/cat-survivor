@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3b0a2b4df16aa44b2be357f6eea95d, type: 3}
   m_Name: PlayerHitSoundSO
   m_EditorClassIdentifier: Assembly-CSharp::SoundSO
-  clip: {fileID: 8300000, guid: bb22e8f54fc60064d8339b9e6811ef7b, type: 3}
+  audioCategory: 0
+  clip: {fileID: 8300000, guid: 2b864bb3ab2960444a2c0b9d0a2d571f, type: 3}
   volume: 1
   volumeVariance: -0.3
-  pitch: 1
+  pitch: 1.1
   isPitchVariable: 1
-  pitchVariance: 0.2
+  pitchVariance: 0.1
   hasCooldown: 1
   cooldown: 0.1
+  maxSimultaneous: 2

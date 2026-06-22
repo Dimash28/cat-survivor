@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeDataSO : ScriptableObject
 {
     public string upgradeTitle;
+    public Sprite icon;
     public WeaponDataSO weaponDataSO;
 
     public int upgradeLevel;

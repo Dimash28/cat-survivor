@@ -11,6 +11,7 @@ public class PlayerHealthBarUI : MonoBehaviour
     {
         healthSystem.OnDamageTaken += HealthSystem_OnDamageTaken;
         healthSystem.OnHeal += HealthSystem_OnHeal;
+        G.upgrade.OnHealthUpgrade += UpdateHealthBarUI;
 
         Hide();
     }

@@ -19,7 +19,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void SetInputParameter()
     {
-        Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
+        Vector2 inputVector = G.input.GetInputVectorNormalized();
 
         if (inputVector != Vector2.zero)
         {

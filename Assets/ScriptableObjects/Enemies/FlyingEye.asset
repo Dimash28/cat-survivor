@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FlyingEye
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
   moveSpeed: 1.3
-  maxHealth: 120
+  maxHealth: 150
   damage: 20
   spawnTimeRanges:
   - from: 5
     to: 8
+  requiresUnlock: 0

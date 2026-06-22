@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public Action OnGameOver;
     public Action OnGameWin;
+    public Action OnPause;
 
     private float gameStartingTimer = 3f;
     private float gamePlayingTimer;
@@ -44,11 +45,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (GameInput.Instance != null)
-            GameInput.Instance.OnEscapePerformed += PerformPause;
+        if (G.input != null)
+            G.input.OnEscapePerformed += PerformPause;
     
-        if (Player.Instance?.GetHealthSystem() != null)
-            Player.Instance.GetHealthSystem().OnDeath += GameOver;
+        if (G.player?.GetHealthSystem() != null)
+            G.player.GetHealthSystem().OnDeath += GameOver;
     }
 
     private void Update()
@@ -101,12 +102,16 @@ public class GameManager : MonoBehaviour
 
         isPaused = true;
         Time.timeScale = 0;
+
+        OnPause?.Invoke();
     }
 
     public void SetUnpause()
     {
         isPaused = false;
         Time.timeScale = 1;
+
+        OnPause?.Invoke();
     }
     
     public float GetGamePlayingTime()
@@ -118,13 +123,31 @@ public class GameManager : MonoBehaviour
     {
         return maxGameTimeInMinutes;
     }
+    
+    public int GetElapsedMinutes()
+    {
+        return Mathf.FloorToInt(
+            (maxGameTimeInMinutes * 60f - gamePlayingTimer) / 60f
+        );
+    }
+
+    public bool IsPaused()
+    {
+        return isPaused;
+    }
 
     private void PerformPause(object sender, System.EventArgs e)
     {
-        if (state != GameState.GamePlaying) return;
+        if (state != GameState.GamePlaying || G.levelUpUI.IsShowing) return;
 
-        if (!isPaused) SetOnPause();
-        else SetUnpause();
+        if (!isPaused) 
+        {
+            SetOnPause();
+        }
+        else
+        {
+            SetUnpause();
+        }
     }
 
     private void GameOver()
@@ -138,10 +161,10 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy() 
     {
-        if (GameInput.Instance != null)
-            GameInput.Instance.OnEscapePerformed -= PerformPause;
+        if (G.input != null)
+            G.input.OnEscapePerformed -= PerformPause;
 
-        if (Player.Instance != null)
-            Player.Instance.GetHealthSystem().OnDeath -= GameOver;
+        if (G.player != null)
+            G.player.GetHealthSystem().OnDeath -= GameOver;
     }
 }

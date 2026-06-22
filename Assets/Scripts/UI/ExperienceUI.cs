@@ -9,22 +9,22 @@ public class ExperienceUI : MonoBehaviour
 
     private void Start()
     {
-        ExperienceSystem.Instance.OnExpGained += ExperienceSystem_OnExpGained;
-        ExperienceSystem.Instance.OnLevelUp += ExperienceSystem_OnLevelUp;
-        ExperienceSystem.Instance.OnCurrentExpAmountReset += ExperienceSystem_OnCurrentExpAmountReset;
+        G.experience.OnExpGained += ExperienceSystem_OnExpGained;
+        G.experience.OnLevelUp += ExperienceSystem_OnLevelUp;
+        G.experience.OnCurrentExpAmountReset += ExperienceSystem_OnCurrentExpAmountReset;
     }
 
     private void ExperienceSystem_OnExpGained()
     {
         expBar.fillAmount = 
-            ExperienceSystem.Instance.GetCurrentExpAmount() / 
-            ExperienceSystem.Instance.GetCurrentExpAmountToNextLevel();
+            G.experience.GetCurrentExpAmount() / 
+            G.experience.GetCurrentExpAmountToNextLevel();
         
     }
 
     private void ExperienceSystem_OnLevelUp()
     {
-        levelText.text = "Level " + ExperienceSystem.Instance.GetLevelNumber().ToString();
+        levelText.text = "Level " + G.experience.GetLevelNumber().ToString();
     }
 
     private void ExperienceSystem_OnCurrentExpAmountReset()

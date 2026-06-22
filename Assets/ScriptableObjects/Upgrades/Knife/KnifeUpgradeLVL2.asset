@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: KnifeUpgradeLVL2
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Knife Upgrade 2 LVL
+  icon: {fileID: -2472801792072297344, guid: 1adb5c8d6614d4f47a3e837ed6613e89, type: 3}
   weaponDataSO: {fileID: 11400000, guid: a67a06ecd2b941641ac79078b2143fe0, type: 2}
   upgradeLevel: 2
   previousUpgradeDataSO: {fileID: 11400000, guid: da6f5a04799fb7a43af9c6c22cfe3ac2, type: 2}
@@ -21,4 +22,6 @@ MonoBehaviour:
   - type: 3
     value: 2
   - type: 6
+    value: 1
+  - type: 2
     value: 1

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ExpBehaviour : MonoBehaviour
 {
+    [SerializeField] private SoundSO expSound;
     private ExpData expData;
 
     private void Awake()
@@ -13,8 +14,9 @@ public class ExpBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ExperienceSystem.Instance.AddExpToCurrentAmount(expData.GetExperienceAmount());
+            G.experience.AddExpToCurrentAmount(expData.GetExperienceAmount());
             
+            G.audio.Play(expSound);
             Destroy(gameObject);
         }
     }

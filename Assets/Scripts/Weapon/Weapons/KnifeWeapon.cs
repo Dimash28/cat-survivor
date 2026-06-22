@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class KnifeWeapon : Weapon
 {
+    [SerializeField] private List<SoundSO> knifeSoundList;
     private Vector2 latestInputVector;
 
     private void Start()
@@ -14,7 +16,7 @@ public class KnifeWeapon : Weapon
     {
         base.Update();
 
-        Vector2 currentInput = GameInput.Instance.GetInputVectorNormalized();
+        Vector2 currentInput = G.input.GetInputVectorNormalized();
         
         if(currentInput != Vector2.zero)
         {
@@ -50,5 +52,7 @@ public class KnifeWeapon : Weapon
                 Debug.LogError("Projectile component not found on prefab!");
             }
         }
+
+        G.audio.Play(knifeSoundList[Random.Range(0, knifeSoundList.Count)]);
     }
 }

@@ -184,3 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
   healAmount: 20
+  foodPickupSoundSO: {fileID: 11400000, guid: fbf12738af631e249bbbda76ec8da2e2, type: 2}

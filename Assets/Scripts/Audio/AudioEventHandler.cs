@@ -8,32 +8,32 @@ public class AudioEventHandler : MonoBehaviour
 
     private void Start()
     {
-        ExperienceSystem.Instance.OnLevelUp += OnLevelUp;
-        Player.Instance.GetHealthSystem().OnDamageTaken += OnPlayerHit;
-        GameManager.Instance.OnGameOver += OnGameOver;
+        G.experience.OnLevelUp += OnLevelUp;
+        G.player.GetHealthSystem().OnDamageTaken += OnPlayerHit;
+        G.game.OnGameOver += OnGameOver;
     }
 
     private void OnLevelUp()
     {
-        AudioManager.Instance.Play(levelUpSound);
+        G.audio.Play(levelUpSound);
     }
 
     private void OnPlayerHit()
     {
-        AudioManager.Instance.Play(playerHitSound);
+        G.audio.Play(playerHitSound);
     }
 
     private void OnGameOver()
     {
-        AudioManager.Instance.Play(gameOverSound);
+        G.audio.Play(gameOverSound);
     }
 
     private void OnDestroy()
     {
-        if (ExperienceSystem.Instance != null)
-            ExperienceSystem.Instance.OnLevelUp -= OnLevelUp;
+        if (G.experience != null)
+            G.experience.OnLevelUp -= OnLevelUp;
 
-        if (Player.Instance != null)
-            Player.Instance.GetHealthSystem().OnDamageTaken -= OnPlayerHit;
+        if (G.player != null)
+            G.player.GetHealthSystem().OnDamageTaken -= OnPlayerHit;
     }
 }

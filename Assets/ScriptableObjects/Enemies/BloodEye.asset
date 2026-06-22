@@ -20,3 +20,4 @@ MonoBehaviour:
     to: 1
   - from: 4
     to: 5
+  requiresUnlock: 0

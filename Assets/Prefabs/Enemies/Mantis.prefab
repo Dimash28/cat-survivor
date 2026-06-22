@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8493320032211086353, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: spawnDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8493320032211086353, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: teleportDistance
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: m_Size.x
       value: 0.6037052
@@ -24,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.4473249
       objectReference: {fileID: 0}
+    - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d5685b7a2440b14f9e145b7961583d1, type: 2}
     - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
       propertyPath: enemyDataSO
       value: 

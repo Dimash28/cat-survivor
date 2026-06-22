@@ -9,7 +9,7 @@ public class TimerUI : MonoBehaviour
 
     private void Start() 
     {
-        time = GameManager.Instance.GetGamePlayingTime();
+        time = G.game.GetGamePlayingTime();
     }
 
     private void Update() 

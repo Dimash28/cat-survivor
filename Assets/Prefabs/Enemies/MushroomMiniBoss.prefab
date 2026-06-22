@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &524758423438271711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5769039
+      objectReference: {fileID: 0}
+    - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1462675
+      objectReference: {fileID: 0}
+    - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.025189668
+      objectReference: {fileID: 0}
+    - target: {fileID: -5438097211219356949, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.50464135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: enemyDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d88e48588a62f445b4469900d5dc20e, type: 2}
+    - target: {fileID: 1380455054939746783, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380455054939746783, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.y
+      value: 4.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380455054939746783, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1231146511, guid: 4f2e4b99f4fb2ed4d8792dcbfda92d08, type: 3}
+    - target: {fileID: 1380455054939746783, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562312282089230784, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562312282089230784, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562312282089230784, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562312282089230784, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951473072314361284, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2bbcdac9882bcfe44b56be185ceecbf7, type: 2}
+    - target: {fileID: 5244576505117888058, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Name
+      value: MushroomMiniBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140049331154674, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Size.y
+      value: 4.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1231146511, guid: 4f2e4b99f4fb2ed4d8792dcbfda92d08, type: 3}
+    - target: {fileID: 9063635021767955029, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115063622511381736, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2bbcdac9882bcfe44b56be185ceecbf7, type: 2}
+    m_RemovedComponents:
+    - {fileID: 1204538230562864825, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5244576505117888058, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 3796709623702682533}
+  m_SourcePrefab: {fileID: 100100000, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+--- !u!4 &1258629791489184128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1603242026734810463, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+  m_PrefabInstance: {fileID: 524758423438271711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5728626598207810277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5244576505117888058, guid: 0be8c1022dcdcad48a016f7e74ec0934, type: 3}
+  m_PrefabInstance: {fileID: 524758423438271711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3796709623702682533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728626598207810277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9405c6838678c47adc1c83b73cd858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniBoss
+  enemyDataSO: {fileID: 11400000, guid: 00bcf39988c34bb4b8b9823805c01e07, type: 2}
+  spriteTransform: {fileID: 1258629791489184128}
+  deathSound: {fileID: 11400000, guid: d66fbd1ddb1eab44e9b38a6980f788e3, type: 2}
+  damageSound: {fileID: 11400000, guid: dd6b035c6198cb641b9441a576d188b0, type: 2}
+  weakVersionData: {fileID: 11400000, guid: 95c1e54903d19554ca2babb32a41e10f, type: 2}
+  miniBossDeathSound: {fileID: 11400000, guid: d66fbd1ddb1eab44e9b38a6980f788e3, type: 2}

@@ -20,4 +20,5 @@ MonoBehaviour:
   projectileSpeed: 5
   projectileCount: 1
   pierce: 1
+  projectileScale: 1
   auraRadius: 0.1

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Beetle
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
   moveSpeed: 1.2
-  maxHealth: 30
+  maxHealth: 40
   damage: 7
   spawnTimeRanges:
   - from: 1
     to: 3
   - from: 6
     to: 7
+  requiresUnlock: 0

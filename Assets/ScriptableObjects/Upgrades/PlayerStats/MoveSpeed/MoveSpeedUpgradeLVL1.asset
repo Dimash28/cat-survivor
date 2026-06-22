@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MoveSpeedUpgradeLVL1
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Increase Move Speed
+  icon: {fileID: 21300000, guid: 57688a3590ccf364d86864f270765ac6, type: 3}
   weaponDataSO: {fileID: 0}
   upgradeLevel: 1
   previousUpgradeDataSO: {fileID: 11400000, guid: 7ffcf61519953574e855b81b8e84187b, type: 2}

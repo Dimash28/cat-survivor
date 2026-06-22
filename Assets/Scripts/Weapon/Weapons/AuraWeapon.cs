@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class AuraWeapon : Weapon
     private Animator auraAnimator;
 
     private List<Enemy> enemyInRangeList;
+
+    private bool isAttacking = false;
 
     protected override void Awake()
     {
@@ -30,14 +33,29 @@ public class AuraWeapon : Weapon
 
     protected override void Attack()
     {
-        foreach(Enemy enemy in enemyInRangeList.ToArray())
+        if (isAttacking) return;
+
+        StartCoroutine(AttackCoroutine());
+    }
+
+    private IEnumerator AttackCoroutine()
+    {
+        isAttacking = true;
+
+        float auraLength = 0.683f;
+        auraAnimator.speed = auraLength / runtimeDataSO.cooldown;
+        auraAnimator.Play("AuraAttack");
+
+        yield return new WaitForSeconds((auraLength / auraAnimator.speed) / 2f);
+
+        foreach (Enemy enemy in enemyInRangeList.ToArray())
         {
-            if(enemy != null)
-            {
+            if (enemy != null)
                 enemy.TakeDamage(runtimeDataSO.damage);
-                auraAnimator.Play("AuraAttack");
-            }
         }
+
+        yield return new WaitForSeconds((auraLength / auraAnimator.speed) / 2f);
+        isAttacking = false;
     }
 
     private void Weapon_OnUpgradeApplied()

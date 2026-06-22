@@ -8,6 +8,7 @@ public class GameWinUI : MonoBehaviour
     [SerializeField] private GameObject template;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button mainMenuButton;
+    [SerializeField] private SoundSO gameWinSoundSO;
 
     private void Awake()
     {
@@ -16,11 +17,11 @@ public class GameWinUI : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.OnGameWin += GameManager_OnGameWin;
+        G.game.OnGameWin += GameManager_OnGameWin;
 
         restartButton.onClick.AddListener(() =>
         {
-            GameManager.Instance.Restart();
+            G.game.Restart();
         });
         
         mainMenuButton.onClick.AddListener(() =>
@@ -32,6 +33,7 @@ public class GameWinUI : MonoBehaviour
     private void GameManager_OnGameWin()
     {
         Show();
+        G.audio.Play(gameWinSoundSO);
     }
 
     private void Show()

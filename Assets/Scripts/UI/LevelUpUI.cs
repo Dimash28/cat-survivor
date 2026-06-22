@@ -1,40 +1,57 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUpUI : MonoBehaviour
 {
     [SerializeField] private GameObject template;
 
+    public static LevelUpUI Instance { get; private set; }
+    public bool IsShowing { get; private set; }
+
     private void Awake()
     {
+        Instance = this;
+
         Hide();
     }
 
     private void Start()
     {
-        ExperienceSystem.Instance.OnLevelUp += ExperienceSystem_OnLevelUp;
+        G.experience.OnLevelUp += ExperienceSystem_OnLevelUp;
     }
 
     private void ExperienceSystem_OnLevelUp()
     {
         Show();
         
-        GameManager.Instance.SetOnPause();
+        G.game.SetOnPause();
     }
 
     private void Show()
     {
+        IsShowing = true;
         template.SetActive(true);
+
+        foreach (var button in GetComponentsInChildren<Button>())
+        {
+            button.OnDeselect(null);
+        }
+
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void Hide()
     {
+        IsShowing = false;
         template.SetActive(false);
     }
 
     public void HideLevelUpUIAndUnpause()
     {
         Hide();
-        GameManager.Instance.SetUnpause();
+        G.game.SetUnpause();
+
+        G.experience.TriggerNextLevelUp();
     }
 }

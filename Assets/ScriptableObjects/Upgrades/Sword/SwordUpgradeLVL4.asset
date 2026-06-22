@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SwordUpgradeLVL4
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Sword Upgrade 4 LVL
+  icon: {fileID: 5719398354656993734, guid: dec05fcefb5664b42b6b9d9d4cf54871, type: 3}
   weaponDataSO: {fileID: 11400000, guid: 261af010ee2746a4cb4ad6da7f3ea597, type: 2}
   upgradeLevel: 4
   previousUpgradeDataSO: {fileID: 11400000, guid: 3dd93485212dc8741a3cf95ceecda22f, type: 2}
@@ -21,4 +22,4 @@ MonoBehaviour:
   - type: 0
     value: 5
   - type: 4
-    value: 1.5
+    value: 3

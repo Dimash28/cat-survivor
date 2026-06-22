@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: SwordUpgradeLVL3
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Sword Upgrade 3 LVL
+  icon: {fileID: 5719398354656993734, guid: dec05fcefb5664b42b6b9d9d4cf54871, type: 3}
   weaponDataSO: {fileID: 11400000, guid: 261af010ee2746a4cb4ad6da7f3ea597, type: 2}
   upgradeLevel: 3
   previousUpgradeDataSO: {fileID: 11400000, guid: 22385e41ec5617a4ea3d4bad5e24852d, type: 2}
   baseUpgradeDataSO: {fileID: 11400000, guid: 82863e5a84241754ca3c43cdbcb5be4e, type: 2}
   upgradeEffectList:
+  - type: 2
+    value: 1
   - type: 1
     value: 0.2
   - type: 4
-    value: 1.2
+    value: 2

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: _BaseUpgrade_Health
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Increase Max Health
+  icon: {fileID: -1751885334345118775, guid: c77106e8cb9b3cb4d835468dde59d01f, type: 3}
   weaponDataSO: {fileID: 0}
   upgradeLevel: 0
   previousUpgradeDataSO: {fileID: 0}

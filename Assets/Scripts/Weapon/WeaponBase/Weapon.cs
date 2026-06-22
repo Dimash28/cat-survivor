@@ -47,7 +47,7 @@ public abstract class Weapon : MonoBehaviour
                     break;
 
                 case UpgradeType.Cooldown:
-                    if (runtimeDataSO.cooldown > 0.3)
+                    if (runtimeDataSO.cooldown > 0.2f)
                         runtimeDataSO.cooldown -= effect.value;
                     else 
                         return;

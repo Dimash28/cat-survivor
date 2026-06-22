@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AuraUpgradeLVL2
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   upgradeTitle: Aura Upgrade 2 LVL
+  icon: {fileID: 2141188580037841102, guid: 0b63bc535c209ea418a19e352f87cacf, type: 3}
   weaponDataSO: {fileID: 11400000, guid: 08655b43f3876764789d28e707462472, type: 2}
   upgradeLevel: 2
   previousUpgradeDataSO: {fileID: 11400000, guid: 02d31a9d15764ad4a8998079d4f89126, type: 2}
@@ -20,5 +21,7 @@ MonoBehaviour:
   upgradeEffectList:
   - type: 0
     value: 2
+  - type: 1
+    value: 0.2
   - type: 5
-    value: 0.3
+    value: 1

@@ -24,6 +24,6 @@ public class EnemyMovement : MonoBehaviour
 
     public Vector2 GetDirectionToPlayer()
     {
-        return (Player.Instance.GetPlayerPosition() - transform.position).normalized;
+        return (G.player.GetPlayerPosition() - transform.position).normalized;
     }
 }

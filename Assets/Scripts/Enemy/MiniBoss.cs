@@ -1,12 +1,23 @@
 using UnityEngine;
+using System.Collections;
 
 public class MiniBoss : Enemy
 {
-    [SerializeField] private ArtifactPickup guardedArtifact;
+    [SerializeField] private SoundSO miniBossDeathSound;
+    private ArtifactPickup guardedArtifact;
+
+    public void SetGuardedArtifact(ArtifactPickup artifact)
+    {
+        guardedArtifact = artifact;
+    }
 
     protected override void OnDeath()
     {
         base.OnDeath();
-        guardedArtifact.Unlock();
+
+        if (guardedArtifact != null)
+            guardedArtifact.Unlock();
+
+        G.audio.Play(miniBossDeathSound);
     }
 }

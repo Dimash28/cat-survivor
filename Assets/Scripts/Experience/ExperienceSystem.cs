@@ -14,6 +14,7 @@ public class ExperienceSystem : MonoBehaviour
     private float defaultExpAmountToNextLevel;
     private float currentExperienceAmount;
     private float expAmountToNextLevelIncrement;
+    private int pendingLevelUps = 0;
 
     private void Awake()
     {
@@ -34,15 +35,24 @@ public class ExperienceSystem : MonoBehaviour
         currentExperienceAmount += expAmount;
         OnExpGained?.Invoke();
 
-        if (currentExperienceAmount >= currentExpAmountToNextLevel)
+        while (currentExperienceAmount >= currentExpAmountToNextLevel)
         {
-            level++;
-            OnLevelUp?.Invoke();
-
+            currentExperienceAmount -= currentExpAmountToNextLevel;
             currentExpAmountToNextLevel *= expAmountToNextLevelIncrement;
-            currentExperienceAmount = 0;
+            level++;
+            pendingLevelUps++;
             OnCurrentExpAmountReset?.Invoke();
         }
+
+        if (pendingLevelUps > 0 && !G.levelUpUI.IsShowing)
+            TriggerNextLevelUp();
+    }
+
+    public void TriggerNextLevelUp()
+    {
+        if (pendingLevelUps <= 0) return;
+        pendingLevelUps--;
+        OnLevelUp?.Invoke();
     }
 
     public int GetLevelNumber()

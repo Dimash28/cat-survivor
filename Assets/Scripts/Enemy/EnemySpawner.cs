@@ -43,8 +43,8 @@ public class EnemySpawner : MonoBehaviour
         if (enemyPrefabs.Count == 0) return;
 
         int elapsed = Mathf.FloorToInt(
-            (GameManager.Instance.GetMaxGameTimeInMinutes() * 60f -
-            GameManager.Instance.GetGamePlayingTime()) / 60f
+            (G.game.GetMaxGameTimeInMinutes() * 60f -
+            G.game.GetGamePlayingTime()) / 60f
         );
 
         List<Enemy> available = enemyPrefabs.FindAll(e =>
@@ -62,7 +62,7 @@ public class EnemySpawner : MonoBehaviour
 
         Enemy prefab = available[Random.Range(0, available.Count)];
         Vector2 randomDir = Random.insideUnitCircle.normalized;
-        Vector3 spawnPos = Player.Instance.GetPlayerPosition() + (Vector3)randomDir * spawnRadius;
+        Vector3 spawnPos = G.player.GetPlayerPosition() + (Vector3)randomDir * spawnRadius;
 
         Enemy enemy = pools[prefab].Get();
         enemy.transform.position = spawnPos;

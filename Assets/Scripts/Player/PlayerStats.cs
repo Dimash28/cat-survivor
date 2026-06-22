@@ -22,7 +22,7 @@ public class PlayerStats : MonoBehaviour
     public void IncreaseMaxHealth(float amount)
     {
         MaxHealth += amount;
-        Player.Instance.GetHealthSystem().IncreaseMaxHealth(amount);
+        G.player.GetHealthSystem().IncreaseMaxHealth(amount);
     }
 
     public void IncreaseMoveSpeed(float amount)

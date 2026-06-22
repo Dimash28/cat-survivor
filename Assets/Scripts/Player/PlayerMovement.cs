@@ -14,14 +14,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 inputVector = GameInput.Instance.GetInputVectorNormalized();
-        float speed = PlayerStats.Instance.MoveSpeed;
+        Vector2 inputVector = G.input.GetInputVectorNormalized();
+        float speed = G.stats.MoveSpeed;
 
         transform.position += (Vector3)inputVector * Time.deltaTime * speed; 
 
         if (inputVector != Vector2.zero && Time.time - lastWalkSoundTime > walkSoundCooldown)
         {
-            AudioManager.Instance.Play(walkSound[Random.Range(0, walkSound.Count)]);
+            G.audio.Play(walkSound[Random.Range(0, walkSound.Count)]);
             lastWalkSoundTime = Time.time;
         }
     }

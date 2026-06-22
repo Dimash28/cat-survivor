@@ -15,11 +15,11 @@ public class GameOverUI : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.OnGameOver += GameManager_OnGameOver;
+        G.game.OnGameOver += GameManager_OnGameOver;
 
         restartButton.onClick.AddListener(() =>
         {
-            GameManager.Instance.Restart();
+            G.game.Restart();
         });
         
         mainMenuButton.onClick.AddListener(() =>
